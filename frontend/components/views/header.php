@@ -25,15 +25,14 @@
                     </a>
                     <ul>
 
-                        <!--                        <li>-->
-                        <!--                            <a href="/our-works">Портфолио</a>-->
-                        <!--                        </li>-->
+                                                <li>
+                                                    <a href="/our-works">Портфолио</a>
+                                                </li>
 
                         <li>
                             <a href="/services">Услуги</a>
                             <i class="fa fa-angle-down"></i>
                             <div class="header_dropdown menu_xtz">
-
                                 <ul>
                                     <?php if ($category) {
                                         foreach ($category as $val) {

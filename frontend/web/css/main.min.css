@@ -3100,7 +3100,7 @@ nav[canvas] .mnu_btn{width:100%;height:100%;display:-webkit-box;display:-webkit-
 @media only screen and (min-width:1200px){.container{width:1200px}
 }
 .languages-header ul li a{font-size: 13px;}
-.header_dropdown.menu_xtz{}
+.header_dropdown.menu_xtz{padding-top: 25px}
 .header_dropdown.menu_xtz > ul{display: table-cell;}
 .header_dropdown.menu_xtz > ul >li{width: 30%;float: left}
 .header_dropdown.menu_xtz ul li a{font-size: 13px;}
