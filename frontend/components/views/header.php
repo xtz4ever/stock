@@ -32,17 +32,13 @@
                         <li>
                             <a href="/services">Услуги</a>
                             <i class="fa fa-angle-down"></i>
-                            <div class="header_dropdown">
+                            <div class="header_dropdown menu_xtz">
 
-                                <ul style="display: table-cell;width: 800px">
+                                <ul>
                                     <?php if ($category) {
                                         foreach ($category as $val) {
                                             ?>
-                                            <li style="width: 30%;float: left ">
-
-                                                <a style="font-size: 13px;"
-                                                   href="/<?= $val['url'] ?>"><?= $val['name'] ?></a>
-                                            </li>
+                                            <li><a href="/<?= $val['url'] ?>"><?= $val['name'] ?></a></li>
                                             <?php
                                         }
                                     } ?>

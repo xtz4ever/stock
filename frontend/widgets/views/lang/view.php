@@ -8,7 +8,7 @@ use yii\helpers\Url;
 <li>
     <a href="#"><?=$current_lang_name;?></a>
     <i class="fa fa-angle-down"></i>
-    <div class="header_dropdown">
+    <div class="header_dropdown languages-header">
 
         <ul>
             <?php foreach ($langs as $lang):?>
