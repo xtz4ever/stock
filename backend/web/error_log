@@ -1,0 +1,69 @@
+[16-Jan-2020 15:49:17 UTC] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method common\models\Event::file() does not exist' in /home/vavilov4/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php:195
+Stack trace:
+#0 /home/vavilov4/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(195): ReflectionMethod->__construct('common\\models\\E...', 'file')
+#1 /home/vavilov4/public_html/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('common\\models\\E...')
+#2 /home/vavilov4/public_html/vendor/yiisoft/yii2/base/View.php(330): require('/home/vavilov4/...')
+#3 /home/vavilov4/public_html/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/vavilov4/...', Array)
+#4 /home/vavilov4/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(249): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/vavilov4/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(304): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/vavilov4/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(326): yii\web\ErrorHandler->renderCallStackItem('/home/vavilov4/...', 136, 'common\\models\\E...', 'file', Array, 3)
+#7 /home/vavilov4/public_html/vendor/yiisoft/yii2/views/errorHandler/exception.php(381): yii\web\ErrorHandler->renderCallStack(Object(yii\base\UnknownMethodException))
+#8 /home/vavilov4/public_html/vendor/yiisoft/yii2/base/View.php(330): require('/home/vavilov4/...')
+#9 /home/vavilov4/public_html/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/vavilov4/...', Array)
+#10 /home/vavilov4/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(249): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#11 /home/vavilov4/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(116): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#12 /home/vavilov4/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownMethodException))
+#13 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownMethodException))
+#14 {main}
+Previous exception:
+exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: common\models\Event::file()' in /home/vavilov4/public_html/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /home/vavilov4/public_html/backend/controllers/ServicesController.php(136): yii\base\Component->__call('file', Array)
+#1 /home/vavilov4/public_html/backend/controllers/ServicesController.php(136): common\models\Event->file()
+#2 [internal function]: backend\controllers\ServicesController->actionUpdate('10')
+#3 /home/vavilov4/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /home/vavilov4/public_html/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /home/vavilov4/public_html/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#6 /home/vavilov4/public_html/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('services/update', Array)
+#7 /home/vavilov4/public_html/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /home/vavilov4/public_html/backend/web/index.php(19): yii\base\Application->run()
+#9 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryYw3B8Du063zXaTjY',
+    'CONTENT_LENGTH' => '933061',
+    'HTTP_COOKIE' => 'advanced-frontend=23u14nbbfhph4hq9vhb6ip6el4; _csrf-frontend=59b98eb3dd3046c1139721111bfd88de56773f229f14f5fadf69b9c5a66f41fda%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%F2%84%18%A1%FF%E8%A0%F2%87%14%29%B4M%EA%87n%28%9E%1F%B9N%FCC%E8Z%AA%DA%91%1D%BC%08%EF%22%3B%7D; _csrf-backend=75fbfc543cc35e83ddf92d9ddd23f3c7a904da528b0b591922b6ef8c4b7b9f1da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%226%12%83%C51%D0%B45%3Fg%7C%92%7D%BD%8BV%C3%25%2F%F6%F7%0CP%24%81%1C%A2%88Y%C9%9D%C9%22%3B%7D; _identity-backend=11076f89af9e7656690c74e96d1b57b54c9263d79b116653f0d23842e960a325a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A21%3A%22%5B5%2C%222592000%22%2C2592000%5D%22%3B%7D; advanced-backend=9tqaluf200ab8beu35tr71alh7',
+    'HTTP_HOST' => 'vavilovdesign.com',
+    'HTTP_REFERER' => 'http://vavilovdesign.com/bureyko/services/update/10',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 OPR/62.0.3331.116',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_ORIGIN' => 'http://vavilovdesign.com',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/vavilov4/public_html',
+    'REMOTE_ADDR' => '77.244.42.167',
+    'REMOTE_PORT' => '47782',
+    'SERVER_ADDR' => '107.181.175.57',
+    'SERVER_NAME' => 'vavilovdesign.com',
+    'SERVER_ADMIN' => 'webmaster@vavilovdesign.com',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/bureyko/services/update/10',
+    'REDIRECT_URL' => '/backend/web/services/update/10',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/vavilov4/public_html/backend/web/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://vavilovdesign.com/bureyko/services/update/10',
+    'SCRIPT_URL' => '/bureyko/services/update/10',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1579189757.79621601104736328125,
+    'REQUEST_TIME' => 1579189757,
+]

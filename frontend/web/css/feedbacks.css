@@ -1,0 +1,514 @@
+@font-face {
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/RobotoRegular.ttf) format("truetype");
+    src: url(../fonts/RobotoRegular.eot) format("embedded-opentype");
+    src: url(../fonts/RobotoRegular.eot?#iefix) format("embedded-opentype");
+    src: url(../fonts/RobotoRegular.woff) format("woff")
+}
+
+.buy_btn {
+    width: 90px;
+    height: 27px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    background: #bb0b3a;
+    text-align: center;
+    line-height: 27px;
+    font-size: 16px;
+    outline: none;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    font-weight: lighter
+}
+
+.buy_btn:hover {
+    outline: 0;
+    background: #f22158;
+    color: #d9d9d9
+}
+
+.buy_btn:active, .buy_btn:focus {
+    outline: 0
+}
+
+.btn_a {
+    width: 230px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 20px;
+    display: block;
+    color: #fff;
+    background: #bb0b3a;
+    font-size: 12px;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear
+}
+
+.btn_a:hover {
+    outline: none;
+    background: #f22158;
+    color: #d9d9d9
+}
+
+.btn-form {
+    width: 170px;
+    height: 50px;
+    color: #fff;
+    background: #bb0b3a;
+    border-radius: 20px;
+    border: none;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    font-size: 20px;
+}
+
+.btn-form:hover {
+    background: #f22158;
+    color: #d9d9d9
+}
+
+.btn-form:active, .btn-form:focus, .btn-form:hover {
+    text-decoration: none;
+    outline: none
+}
+
+.main_btn {
+    min-width: 272px;
+    height: 49px;
+    line-height: 49px;
+    padding: 0 5px;
+    border: 1px solid transparent;
+    background-color: #bb0b3a;
+    text-transform: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-size: 1rem;
+    font-family: RobotoRegular, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s
+}
+
+.main_btn:active, .main_btn:focus, .main_btn:hover {
+    background-color: #fff;
+    border: 1px solid #bb0b3a;
+    color: #bb0b3a
+}
+
+.main_btn:focus {
+    outline: 0
+}
+
+.btn_plus {
+    width: 70px;
+    height: 50px;
+    background: #bb0b3a;
+    color: #fff;
+    font-size: 45px;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear
+}
+
+.btn_plus:before {
+    content: "+";
+    position: absolute;
+    top: -18%;
+    left: 31%
+}
+
+.btn_plus:focus {
+    outline: none
+}
+
+.btn_plus:hover {
+    background: #eb0e49;
+    color: #fff
+}
+
+.btn_plus.minus {
+    line-height: 25px;
+    font-size: 50px
+}
+
+.btn_plus.minus:before {
+    content: "-";
+    position: absolute;
+    top: 19%;
+    left: 38%
+}
+
+.center {
+    text-align: center
+}
+
+.left {
+    text-align: left
+}
+
+.right {
+    text-align: right
+}
+
+.flex-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.feedbacks-section {
+    padding-top: 200px;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+}
+
+
+.feedbacks-section .feedbacks_list .fl_item {
+    padding-top: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.feedbacks-section .feedbacks_list .fl_item .logo_red {
+    width: 170px;
+    margin-right: 30px
+}
+
+.feedbacks-section .feedbacks_list .fl_item .fl_body,.feedbacks-section .feedbacks_list .fl_item .fl_body,
+.feedbacks-section .feedbacks_list .fl_item .fl_body .wrap_user_data {
+    /*width: 83%;*/
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.feedbacks-section .feedbacks_list .fl_item .fl_body .user_data_dots {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-bottom: 30px
+}
+
+.feedbacks-section .feedbacks_list .fl_item .fl_body .user_data_dots .user_name {
+    font-size: 27px
+}
+
+.feedbacks-section .feedbacks_list .fl_item .fl_body .user_data_dots .feedback_data {
+    font-size: 20px;
+    color: gray
+}
+
+.feedbacks-section .feedbacks_list .fl_item .fl_body .feedback-text {
+
+    font-size: 15px;
+    min-height: 65px;
+    width: 100%;
+    text-align: center;
+}
+
+.feedbacks-section .loader_more {
+    text-align: center
+}
+
+.feedbacks-section .loader_more a {
+    color: #bb0b3a;
+    position: relative
+}
+
+.feedbacks-section .loader_more a, .feedbacks-section .loader_more a:after {
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear
+}
+
+
+
+.feedbacks-section .loader_more a:hover:after {
+    width: 100%
+}
+
+.form_opinion {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    width: 100%;
+
+    height: 100%;
+
+    top: 0;
+
+    left: 0;
+
+
+}
+
+.form_opinion .title_wrap {
+    font-size: 25px
+}
+
+.form_opinion .form_opinion_wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.form_opinion .form_opinion_wrap .form_container {
+    width: 570px;
+}
+
+.form_opinion .form_opinion_wrap .form_container form label {
+    display: block
+}
+
+.form_opinion .form_opinion_wrap .form_container form input, .form_opinion .form_opinion_wrap .form_container form textarea {
+    width: 100%;
+    resize: none;
+    height: 25px;
+    padding-left: 10px;
+    border-radius: 5px;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    border: 1px solid gray;
+    margin-bottom: 18px;
+    font-weight: lighter
+}
+
+.form_opinion .form_opinion_wrap .form_container form input:focus, .form_opinion .form_opinion_wrap .form_container form textarea:focus {
+    border: 1px solid #bb0b3a
+}
+
+.form_opinion .form_opinion_wrap .form_container form textarea {
+    height: auto
+}
+
+.form_opinion .form_opinion_wrap .form_container form button {
+    width: 300px
+}
+
+.form_opinion .form_opinion_wrap .opinion {
+    width: 570px;
+    padding: 0 0 0 70px
+}
+
+.form_opinion .form_opinion_wrap .opinion .opinion_text {
+    padding-bottom: 30px
+}
+
+.form_opinion .form_opinion_wrap .opinion .opinion_text h4 {
+    margin-bottom: 0
+}
+
+.form_opinion .form_opinion_wrap .opinion .resourse-list li {
+    padding-top: 10px
+}
+
+.form_opinion .form_opinion_wrap .opinion .resourse-list li img {
+    padding-right: 20px
+}
+
+.form_opinion .form_opinion_wrap .opinion .resourse-list li a {
+    color: #bb0b3a;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    position: relative
+}
+
+.form_opinion .form_opinion_wrap .opinion .resourse-list li a:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: #bb0b3a;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    margin: 0 auto
+}
+
+.form_opinion .form_opinion_wrap .opinion .resourse-list li a:hover:after {
+    width: 100%
+}
+
+@media only screen and (min-width: 1199px) and (max-height: 685px) {
+    .mfp-close-btn-in .mfp-close {
+        top: 10px
+    }
+
+    .mfp-close-btn-in .mfp-close i {
+        color: #000
+    }
+}
+
+@media only screen and (max-width: 1199px) and (max-height: 666px) {
+    .mfp-close-btn-in .mfp-close {
+        top: 10px
+    }
+
+    .mfp-close-btn-in .mfp-close i {
+        color: #000
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .header__modal {
+        margin-top: 20px
+    }
+
+    .intermediate .intermediate_wrap {
+        margin-bottom: 20px
+    }
+
+    .intermediate .intermediate_wrap .modal_form_input_wrap {
+        display: inline-block
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .header__nav {
+        display: none
+    }
+
+    .header__logo {
+        display: block;
+        margin-top: 0
+    }
+
+    .header__modal {
+        margin-top: 40px
+    }
+
+    nav[canvas] {
+        display: block
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .animated {
+        -o-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        -webkit-animation: none !important;
+        animation: none !important
+    }
+
+    .header__title h1 {
+        font-size: 30px;
+        margin-top: 40px
+    }
+
+    .header__modal {
+        margin-top: 40px
+    }
+
+    [off-canvas*=left] {
+        width: 255px
+    }
+
+    .react h2 {
+        font-size: 20px
+    }
+
+    .file_wrap input {
+        width: 80%
+    }
+
+    .white-popup textarea {
+        min-height: 80px
+    }
+
+    .logo_red_xtz{
+        position: absolute;
+        margin-top: -2%;
+        text-align: center;
+        width: 100%;
+    }
+    .fl_body{
+        padding-top: 15%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .white-popup {
+        width: 100%;
+        padding: 20px 10px
+    }
+
+    .white-popup input[type=submit] {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .our-advantages .our-advantages__item .our-advantages__img i {
+        font-size: 37px
+    }
+
+    .header__title h1 {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 23px
+    }
+
+    .intermediate .intermediate_title h3 {
+        font-size: 20px
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1200px
+    }
+}
+
+#loading-center-absolute > img{
+    width: 50px;
+}
