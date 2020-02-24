@@ -104,4 +104,12 @@ class SeoPage extends \yii\db\ActiveRecord
            return null;
         }
     }
+
+    public static function updateRecord($page,$lang,$column, $value){
+
+        \Yii::$app->db->createCommand("UPDATE `seo_page` SET $column='".$value."' WHERE page_name=:page_name AND lang=:lang ")
+            ->bindValue(':page_name', $page)
+            ->bindValue(':lang', $lang)
+            ->execute();
+    }
 }

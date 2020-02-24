@@ -318,9 +318,9 @@ th.kv-align-center.kv-align-middle {
 }
 
 #accproduct-position, #acccategory-position, #accrightsidebarforcategory-position {
-     max-width: 65px;
+    max-width: 65px;
 
- }
+}
 
 /*ul#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10{*/
 /*margin-left: -55px;*/
@@ -384,5 +384,14 @@ div.green{
 }
 
 
+.seo-lang-button.selected{
+    background: #f24040;
+}
 
+.button-tab-langs{
 
+    margin-top: 2%;
+}
+.button-tab-langs .seo-lang-button{
+    margin-right: 5%;
+}

@@ -72,13 +72,14 @@ class SeopageController extends BackAppController
     public function actionCreate()
     {
         $model = new SeoPage();
-
+        $langs = Lang::getAllLangs();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'langs' => $langs,
             ]);
         }
     }
@@ -92,20 +93,28 @@ class SeopageController extends BackAppController
     public function actionUpdate($page_name)
     {
         $model = $this->findModels($page_name);
-
+        $langs = Lang::getAllLangs();
 
         if (Yii::$app->request->post()){
-            echo "<pre>";
-            var_dump(Yii::$app->request->post());
-            echo "</pre>";
-            die();
+
+            $post = Yii::$app->request->post();
+            $page_name = $post['page_name'];
+
+            foreach (Yii::$app->request->post() as $key => $array){
+                if (is_array($array)){
+                    foreach ($array as $lang_key => $value){
+                        SeoPage::updateRecord($page_name, $lang_key, $key, $value);
+                    }
+                }
+            }
+            return $this->redirect('/bureyko/seopage');
         }else {
 
             $result = [];
             foreach ($model as $k => $v) {
                 $result[$v->lang] = $v;
             }
-            $langs = Lang::getAllLangs();
+
 
             return $this->render('update', [
                 'model' => $result,

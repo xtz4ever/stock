@@ -3,6 +3,7 @@
 $('.seo-lang-button').on('click', function(e){
     e.preventDefault();
    var lang = $(this).attr('data-lang');
+
    $('.seo-lang-button').each(function () {
        $('.seo-lang-button').removeClass('selected');
    });
