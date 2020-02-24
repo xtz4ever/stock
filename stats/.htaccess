@@ -1,7 +1,0 @@
-AuthName "new.stockaccs.com statistics"
-AuthType Basic
-AuthUserFile /home/new/.stats-htpasswd
-require valid-user
-<Files .stats-htpasswd>
-deny from all
-</Files>

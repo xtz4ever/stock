@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use common\models\ProviderAccountType;
+use phpDocumentor\Reflection\DocBlock\Tags\Var_;
 use Yii;
 use common\models\SeoPage;
 use common\models\SeoPageSearch;
@@ -10,6 +11,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\Json;
+use common\models\Lang;
 /**
  * SeopageController implements the CRUD actions for SeoPage model .
  */
@@ -87,17 +89,37 @@ class SeopageController extends BackAppController
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($page_name)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModels($page_name);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+        if (Yii::$app->request->post()){
+            echo "<pre>";
+            var_dump(Yii::$app->request->post());
+            echo "</pre>";
+            die();
+        }else {
+
+            $result = [];
+            foreach ($model as $k => $v) {
+                $result[$v->lang] = $v;
+            }
+            $langs = Lang::getAllLangs();
+
+            return $this->render('update', [
+                'model' => $result,
+                'langs' => $langs,
+                'page_name' => $page_name,
+            ]);
+        }
+        /*if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
             ]);
-        }
+        }*/
     }
 
     /**
@@ -135,6 +157,15 @@ class SeopageController extends BackAppController
     protected function findModel($id)
     {
         if (($model = SeoPage::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+    protected function findModels($page_name)
+    {
+        if (($model = SeoPage::find()->where(['page_name' => $page_name])->all() ) !== null) {
+
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

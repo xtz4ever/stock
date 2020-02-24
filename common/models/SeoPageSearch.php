@@ -19,7 +19,7 @@ class SeoPageSearch extends SeoPage
     {
         return [
             [['id'], 'integer'],
-            [['page_name', 'seo_title_ru', 'seo_description_ru', 'seo_keywords_ru', 'seo_image_alt_ru', 'seo_image_title_ru', 'description_ru', 'h1_ru', 'seo_title_en', 'seo_description_en', 'seo_keywords_en', 'seo_image_alt_en', 'seo_image_title_en', 'description_en', 'h1_en'], 'safe'],
+            [['page_name', 'seo_title', 'seo_description', 'seo_keywords', 'description', 'h1', 'lang'], 'safe'],
         ];
     }
 
@@ -63,20 +63,12 @@ class SeoPageSearch extends SeoPage
         ]);
 
         $query->andFilterWhere(['like', 'page_name', $this->page_name])
-            ->andFilterWhere(['like', 'seo_title_ru', $this->seo_title_ru])
-            ->andFilterWhere(['like', 'seo_description_ru', $this->seo_description_ru])
-            ->andFilterWhere(['like', 'seo_keywords_ru', $this->seo_keywords_ru])
-            ->andFilterWhere(['like', 'seo_image_alt_ru', $this->seo_image_alt_ru])
-            ->andFilterWhere(['like', 'seo_image_title_ru', $this->seo_image_title_ru])
-            ->andFilterWhere(['like', 'description_ru', $this->description_ru])
-            ->andFilterWhere(['like', 'h1_ru', $this->h1_ru])
-            ->andFilterWhere(['like', 'seo_title_en', $this->seo_title_en])
-            ->andFilterWhere(['like', 'seo_description_en', $this->seo_description_en])
-            ->andFilterWhere(['like', 'seo_keywords_en', $this->seo_keywords_en])
-            ->andFilterWhere(['like', 'seo_image_alt_en', $this->seo_image_alt_en])
-            ->andFilterWhere(['like', 'seo_image_title_en', $this->seo_image_title_en])
-            ->andFilterWhere(['like', 'description_en', $this->description_en])
-            ->andFilterWhere(['like', 'h1_en', $this->h1_en]);
+            ->andFilterWhere(['like', 'seo_title', $this->seo_title])
+            ->andFilterWhere(['like', 'seo_description', $this->seo_description])
+            ->andFilterWhere(['like', 'seo_keywords', $this->seo_keywords])
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'h1', $this->h1])
+            ->andFilterWhere(['like', 'lang', $this->lang]);
 
         return $dataProvider;
     }

@@ -693,3 +693,4 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}
 .nav-line:nth-child(4){-webkit-transition:.5s;-o-transition:.5s;transition:.5s;top:28px}
 .nav-line:nth-child(3){-webkit-transition:.5s;-o-transition:.5s;transition:.5s;top:14px}
 .header_nav > .logo > img{width: 300px;}
+.fa-angle-down{color: #f34255;}

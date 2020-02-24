@@ -1,12 +1,5 @@
 <?php
-//
-//use yii\helpers\Html;
-//use yii\grid\GridView;
-//use yii\widgets\Pjax;
-///* @var $this yii\web\View */
-///* @var $searchModel common\models\SeoPageSearch */
-///* @var $dataProvider yii\data\ActiveDataProvider */
-//
+
 $this->title = 'Seo Pages';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -33,6 +26,8 @@ $this->params['breadcrumbs'][] = $this->title;
 use yii\bootstrap\ButtonDropdown;
 use yii\helpers\Html;
 use kartik\grid\GridView;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
 
 $gridColumns = [
 
@@ -46,18 +41,24 @@ $gridColumns = [
         'attribute' => Yii::t('app', 'page_name'),
     ],
     [
-        'attribute' => Yii::t('app', 'seo_title_ru'),
+        'attribute' => Yii::t('app', 'h1'),
+    ],
+    [
+        'attribute' => Yii::t('app', 'seo_title'),
     ],
 
-//    [
-//        'attribute' => Yii::t('app', 'seo_description_ru'),
-//    ],
-//    [
-//        'attribute' => Yii::t('app', 'seo_title_en'),
-//    ],
-//    [
-//        'attribute' => Yii::t('app', 'seo_description_en'),
-//    ],
+    [
+        'attribute' => Yii::t('app', 'lang'),
+        'format'=>'raw',
+//        'value' => function ($model, $key, $index, $column) {
+//            $arr = \common\models\Lang::findOne(['id' => $model->master_id]);
+//            return Html::a($arr->full_name, ['/workers/view', 'id' => $arr->id]);
+//
+//        },
+        'filter' => Html::activeDropDownList($searchModel, 'lang', ArrayHelper::map(\common\models\Lang::find()->asArray()->all(), 'url', 'url'), ['class' => 'form-control', 'prompt' => 'Все'], ['multiple' => false]),
+        'contentOptions' => ['style' => 'text-align: center; width: 10%'],
+    ],
+
 
 
 
@@ -78,7 +79,8 @@ $gridColumns = [
             $update = [
                 'encode' => false,
                 'label' => '<span class="glyphicon glyphicon-pencil"></span> '.Yii::t('app', 'update'),
-                'url' => ['update', 'id'=>$model->id],
+//                'url' => ['update', 'id'=>$model->id],
+                'url' => ['update', 'page_name'=>$model->page_name],
             ];
 
             $delete = [

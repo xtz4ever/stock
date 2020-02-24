@@ -3,7 +3,7 @@ RewriteBase /
 
 
 
-php_value short_open_tag 1
+#php_value short_open_tag 1
 
 
 

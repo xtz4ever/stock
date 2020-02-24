@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use frontend\models\Lang;
 use Yii;
 
 /**
@@ -9,20 +10,11 @@ use Yii;
  *
  * @property integer $id
  * @property string $page_name
- * @property string $seo_title_ru
- * @property string $seo_description_ru
- * @property string $seo_keywords_ru
- * @property string $seo_image_alt_ru
- * @property string $seo_image_title_ru
- * @property string $description_ru
- * @property string $h1_ru
- * @property string $seo_title_en
- * @property string $seo_description_en
- * @property string $seo_keywords_en
- * @property string $seo_image_alt_en
- * @property string $seo_image_title_en
- * @property string $description_en
- * @property string $h1_en
+ * @property string $seo_title
+ * @property string $seo_description
+ * @property string $seo_keywords
+ * @property string $description
+ * @property string $h1
  */
 class SeoPage extends \yii\db\ActiveRecord
 {
@@ -40,10 +32,10 @@ class SeoPage extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['page_name', 'seo_title_ru'], 'required'],
-            [['seo_description_ru', 'description_ru', 'h1_ru', 'seo_description_en', 'description_en', 'h1_en'], 'string'],
+            [['page_name', 'seo_title'], 'required'],
+            [['seo_description', 'description', 'h1', 'lang'], 'string'],
             [['page_name'], 'string', 'max' => 100],
-            [['seo_title_ru', 'seo_keywords_ru', 'seo_image_alt_ru', 'seo_image_title_ru', 'seo_title_en', 'seo_keywords_en', 'seo_image_alt_en', 'seo_image_title_en'], 'string', 'max' => 255],
+            [['seo_title', 'seo_keywords'], 'string', 'max' => 255],
         ];
     }
 
@@ -55,45 +47,30 @@ class SeoPage extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'page_name' => 'Название Страницы',
-            'seo_title_ru' => 'Title ',
-            'seo_description_ru' => 'Description ',
-            'seo_keywords_ru' => 'Keywords',
-            'seo_image_alt_ru' => 'Seo Image Alt',
-            'seo_image_title_ru' => 'Seo Image Title',
-            'description_ru' => 'Текст на странице',
-            'h1_ru' => 'H1',
-            'seo_title_en' => 'Seo Title En',
-            'seo_description_en' => 'Seo Description En',
-            'seo_keywords_en' => 'Seo Keywords En',
-            'seo_image_alt_en' => 'Seo Image Alt En',
-            'seo_image_title_en' => 'Seo Image Title En',
-            'description_en' => 'Текст на странице En',
-            'h1_en' => 'H1 En',
+            'seo_title' => 'Title ',
+            'seo_description' => 'Description ',
+            'seo_keywords' => 'Keywords',
+            'description' => 'Текст на странице',
+            'h1' => 'H1',
+            'lang' => 'Язык',
         ];
     }
 
     /*Мета теги + H1 + Текст для страниц*/
     public function getSeo($page)
     {
-
-//        if (isset($_GET["url"]) && !empty($_GET["url"])) {
-//            $page = $_GET["url"];
-//        }
-
-
-        $page = SeoPage::find()->where(['page_name' => $page])->one();
-
-
+        $page = SeoPage::find()->where(['page_name' => $page, 'lang' => Lang::getCurrent()->url])->one();
 
         if ($page) {
 
-            $seo_title = $page->seo_title_ru;
-            $seo_description = $page->seo_description_ru;
-            $seo_keywords = $page->seo_keywords_ru;
-            $h1 = $page->h1_ru;
-            $description = $page->description_ru;
+            $seo_title = $page->seo_title;
+            $seo_description = $page->seo_description;
+            $seo_keywords = $page->seo_keywords;
+            $h1 = $page->h1;
+            $description = $page->description;
 
         } else {
+
             $seo_title = Yii::$app->controller->action->id;
             $h1 = '';
             $seo_description = '';

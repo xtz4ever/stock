@@ -62,6 +62,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
 <?php
 $this->params['new_feedbacs'] = \common\models\Feedbacs::getNewFeedbacs();
 $this->params['new_contacts'] = \common\models\ContactForm::getNewContact();
+
+$username = !is_null(Yii::$app->user->identity) ? Yii::$app->user->identity->username : 'admin';
  ?>
 
 
@@ -84,7 +86,7 @@ $this->params['new_contacts'] = \common\models\ContactForm::getNewContact();
 <!--                    </div>-->
                     <div class="profile_info">
 
-                        <h2>С возвращением, <?=Yii::$app->user->identity->username;?></h2>
+                        <h2>С возвращением, <?=$username;?></h2>
                     </div>
                 </div>
                 <!-- /menu prile quick info -->
@@ -198,7 +200,7 @@ $this->params['new_contacts'] = \common\models\ContactForm::getNewContact();
                         <b>Вопросительные знаки возле каждого пункат меню, это подсказки</b>
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <?=Yii::$app->user->identity->username;?>
+                                <?=$username;?>
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">

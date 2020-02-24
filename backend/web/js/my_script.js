@@ -1,15 +1,18 @@
 /*СЕО показывать отдельно русский и английский*/
 
-$('#ru').on('click', function () {
-    $('#russion').css('display', 'block');
-    $('#english').fadeOut('slow');
-    $('#seo-page-form-button').css('display', 'none');
+$('.seo-lang-button').on('click', function(e){
+    e.preventDefault();
+   var lang = $(this).attr('data-lang');
+   $('.seo-lang-button').each(function () {
+       $('.seo-lang-button').removeClass('selected');
+   });
+   $('.seo-langs-form').each(function () {
+       $('.seo-langs-form').css('display', 'none');
+   });
+   $(this).addClass('selected');
+    $('#'+lang+'').css('display', 'block');
 });
-$('#en').on('click', function () {
-    // $('#russion').css('display', 'none');
-    $('#english').fadeIn('slow');
-    $('#seo-page-form-button').css('display', 'block');
-});
+
 
 $('#acc-category-create').on('click', function () {
     var seoTitleRu = $('#seopage-seo_title_ru').val();
