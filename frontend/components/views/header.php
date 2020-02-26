@@ -1,3 +1,7 @@
+<?php
+use yii\helpers\Url;
+?>
+
 <header id="header" class="header">
     <?php
 /*    $lang = substr(Yii::$app->language, 0, 2);
@@ -6,7 +10,7 @@
     <?php if ($phone === true) { ?>
         <div class="container" style="text-align: center;padding-top: 13%;">
             <div class="row">
-                <a href="/" class="logo">
+                <a href="<?= Url::to($lang_url.'/'); ?>" class="logo">
                     <i>
                         <img src="img/logo.png" alt="">
                     </i>
@@ -20,24 +24,19 @@
 
             <div class="header_nav_wrap">
                 <nav class="header_nav">
-                    <a href="/" class="logo">
+                    <a href="<?= Url::to($lang_url.'/'); ?>" class="logo">
                         <img src="/img/logo.png" alt="">
                     </a>
                     <ul>
-
-                        <!--                        <li>-->
-                        <!--                            <a href="/our-works">Портфолио</a>-->
-                        <!--                        </li>-->
-
                         <li>
-                            <a href="/services">Услуги</a>
+                            <a href="<?= Url::to($lang_url.'/services'); ?>">Услуги</a>
                             <i class="fa fa-angle-down"></i>
                             <div class="header_dropdown menu_xtz">
                                 <ul>
                                     <?php if ($category) {
                                         foreach ($category as $val) {
                                             ?>
-                                            <li><a href="/<?= $val['url'] ?>"><?= $val['name'] ?></a></li>
+                                            <li><a href="<?= Url::to($lang_url.'/'.$val['url']); ?> "><?= $val['name'] ?></a></li>
                                             <?php
                                         }
                                     } ?>
@@ -47,25 +46,17 @@
                             </div>
                         </li>
                         <li>
-                            <a href="/faq">FAQ</a>
+                            <a href="<?= Url::to($lang_url.'/faq'); ?>">FAQ</a>
                         </li>
-                        <!--                        <li>-->
-                        <!--                            <a href="/" class="logo">-->
-                        <!--                                <i>-->
-                        <!--                                    <img src="img/logo.png" alt="">-->
-                        <!--                                </i>-->
-                        <!--                            </a>-->
-                        <!--                        </li>-->
-
                         <li>
-                            <a href="/feedbacks">Отзывы</a>
+                            <a href="<?= Url::to($lang_url.'/feedbacks'); ?>">Отзывы</a>
                         </li>
 
                         <!--                        <li>-->
                         <!--                            <a data-modal="modal-2" class="modal_xtz" style="width: 100px;height: 25px" href="#">Контакты</a>-->
                         <!--                        </li>-->
                         <li>
-                            <a href="/createcontacts">Контакты</a>
+                            <a href="<?= Url::to($lang_url.'/createcontacts'); ?>">Контакты</a>
                         </li>
 
                         <?=\frontend\widgets\WLang::widget();?>
@@ -73,12 +64,6 @@
                 </nav>
 
             </div>
-            <!--            <div class="header_title">-->
-            <!--                <h1>--><?php //if (isset($text['h1'])) {
-            //                        echo $text['h1'];
-            //                    } ?>
-            <!--                </h1>-->
-            <!--            </div>-->
 
 
         </div>

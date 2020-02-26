@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use frontend\models\Lang;
 use Yii;
 
 /**
@@ -30,7 +31,7 @@ class Faq extends \yii\db\ActiveRecord
     {
         return [
             [['question', 'answer', 'status', 'position'], 'required'],
-            [['question', 'answer'], 'string'],
+            [['question', 'answer', 'lang'], 'string'],
             [['status', 'position'], 'integer'],
         ];
     }
@@ -50,6 +51,6 @@ class Faq extends \yii\db\ActiveRecord
     }
 
     public static function getAllQuestions(){
-        return Faq::find()->where(['status' => 1])->orderBy(['position' => SORT_ASC])->asArray()->all();
+        return Faq::find()->where(['status' => 1, 'lang' => Lang::getCurrent()->url])->orderBy(['position' => SORT_ASC])->asArray()->all();
     }
 }

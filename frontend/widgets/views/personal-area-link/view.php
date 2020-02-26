@@ -67,7 +67,7 @@ if (Yii::$app->language == 'ru-RU') {
             /*position: absolute;*/
             /*margin-top: 7%;*/
             margin-left: 34%;
-            background: #bb0b3a;
+            background: #f34255;
             font-size: 17px;
             width: 38%;
             display: inline-block;

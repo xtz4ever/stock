@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\widgets\SwitchInput;
+
 /* @var $this yii\web\View */
 /* @var $model common\models\Faq */
 /* @var $form yii\widgets\ActiveForm */
@@ -11,6 +12,14 @@ use kartik\widgets\SwitchInput;
 <div class="admin_form_me_custom">
 
     <?php $form = ActiveForm::begin(); ?>
+
+
+    <?= $form->field($model, 'lang')->dropDownList(\common\models\Lang::getAllLangs(), [
+        'id' => 'lang',
+        'prompt' => 'Выберите Язык',
+        [
+            'disabled' => true,
+        ]])->label('Язык'); ?>
 
     <?= $form->field($model, 'question')->textarea(['rows' => 6]) ?>
 

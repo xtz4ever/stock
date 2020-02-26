@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Feedbacs;
-use common\models\FeedbacsSearch;
+use backend\models\Feedbacs;
+use backend\models\FeedbacsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

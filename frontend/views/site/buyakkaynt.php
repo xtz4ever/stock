@@ -29,7 +29,7 @@ $this->registerCssFile('css/common.css',
     }
 
     .span-price {
-        color: #bb0b3a;
+        color: #f34255;
         font-weight: 600;
     }
 

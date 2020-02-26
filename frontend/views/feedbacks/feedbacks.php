@@ -1,5 +1,6 @@
 <?php
 
+use frontend\assets\FeedbacsAsset;
 use frontend\assets\AppAsset;
 use \yii\helpers\Url;
 use kartik\form\ActiveForm;
@@ -9,10 +10,7 @@ use yii\widgets\Pjax;
 use himiklab\yii2\recaptcha\ReCaptcha;
 
 
-$this->registerCssFile('css/feedbacks.css',
-    ['depends' => [AppAsset::className()],
-        'position' => \yii\web\View::POS_HEAD
-    ]);
+$this->registerCssFile('css/feedbacks.css');
 ?>
 
 <?php
@@ -59,7 +57,7 @@ if (Yii::$app->session->hasFlash('success')){?>
                         <div class="fl_item">
                             <div class="fl_body">
                                 <div id="loading-center-absolute">
-                                    <img src="img/logo.png" alt="">
+                                    <img src="/img/logo.png" alt="">
                                 </div>
 
                                 <div class="user_data_dots">
@@ -118,24 +116,24 @@ if (Yii::$app->session->hasFlash('success')){?>
                     );
                     ?>
                     <div>
-                        <label>Имя:</label>
+<!--                        <label>Имя:</label>-->
                         <div class="modal_form_input_wrap">
                             <div class="modal_input_error">Заполните поле
                                 <div class="modal_error_triangle"></div>
                                 <div class="modal_error_chest_img"></div>
                             </div>
-                            <?= $form->field($model, 'name')->textInput(['class' => 'modal_form_input', 'placeholder' => "Введите ваше имя."])->label(false); ?>
+                            <?= $form->field($model, 'name')->textInput(['class' => 'modal_form_input', 'placeholder' => "Введите ваше имя."]); ?>
 
                         </div>
                     </div>
                     <div>
-                        <label>E-mail:</label>
+<!--                        <label>E-mail:</label>-->
                         <div class="modal_form_input_wrap">
                             <div class="modal_input_error">Заполните поле
                                 <div class="modal_error_triangle"></div>
                                 <div class="modal_error_chest_img"></div>
                             </div>
-                            <?= $form->field($model, 'email')->textInput(['class' => 'modal_form_email', 'placeholder' => "Ваш действующий email адрес"])->label(false); ?>
+                            <?= $form->field($model, 'email')->textInput(['class' => '', 'placeholder' => "Ваш действующий email адрес"]); ?>
 
 
                         </div>
@@ -143,7 +141,7 @@ if (Yii::$app->session->hasFlash('success')){?>
 
 
                     <div>
-                        <label>Сообщение:</label>
+<!--                        <label>Сообщение !!!:</label>-->
                         <div class="modal_form_input_wrap dis_block">
                             <div class="modal_input_error">Заполните поле
                                 <div class="modal_error_triangle"></div>

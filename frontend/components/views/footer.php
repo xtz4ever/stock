@@ -1,3 +1,9 @@
+<?php
+use yii\helpers\Url;
+use frontend\components\LangUrlManager;
+$lang_url = LangUrlManager::getUrlLink();
+?>
+
 <style>
 
 
@@ -14,6 +20,7 @@
     }
 
 </style>
+
 <footer class="footer">
     <div class="container">
         <div class="row footer_xtz">
@@ -22,11 +29,11 @@
                 <nav>
                     <ul>
                         <li id="footer-dropdown">
-                            <a href="/services">Услуги</a>
+                            <a href="<?= Url::to($lang_url.'/services'); ?>">Услуги</a>
                             <i class="fa fa-angle-down"  ></i>
                             <div class="footer_dropdown">
                                 <i>
-                                    <img src="img/decor_header_dropdown.png" alt="">
+                                    <img src="/img/decor_header_dropdown.png" alt="">
                                 </i>
                                 <ul>
                                     <?php if ($category) {
@@ -34,7 +41,7 @@
                                             ?>
                                             <li style="width: 100%;">
 
-                                                <a href="/<?= $val['url'] ?>"><?= $val['name'] ?></a>
+                                                <a href="<?= Url::to($lang_url.'/'.$val['url']); ?>"><?= $val['name'] ?></a>
                                             </li>
                                             <?php
                                         }
@@ -45,9 +52,9 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-sm-6 col-lg-3"> <a href="/feedbacks">Отзывы</a></div>
-            <div class="col-sm-6 col-lg-3"><a href="/createcontacts">Контакты</a></div>
-            <div class="col-sm-6 col-lg-3"><a href="/faq">FAQ</a></div>
+            <div class="col-sm-6 col-lg-3"> <a href="<?= Url::to($lang_url.'/feedbacks'); ?>">Отзывы</a></div>
+            <div class="col-sm-6 col-lg-3"><a href="<?= Url::to($lang_url.'/createcontacts'); ?>">Контакты</a></div>
+            <div class="col-sm-6 col-lg-3"><a href="<?= Url::to($lang_url.'/faq'); ?>">FAQ</a></div>
         </div>
     </div>
 </footer>

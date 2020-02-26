@@ -3,6 +3,7 @@ namespace frontend\components;
 
 use yii\web\UrlManager;
 use frontend\models\Lang;
+use Yii;
 
 class LangUrlManager extends UrlManager
 {
@@ -30,5 +31,15 @@ class LangUrlManager extends UrlManager
         }else{
             return '/'.$lang->url.$url;
         }
+    }
+
+    public static function getUrlLink(){
+        $lang = substr(Yii::$app->language, 0, 2);
+        if ($lang == 'ru') {
+            $lang_url = '';
+        } else {
+            $lang_url = '/'.$lang;
+        }
+        return $lang_url;
     }
 }

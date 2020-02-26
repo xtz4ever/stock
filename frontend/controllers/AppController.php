@@ -36,13 +36,12 @@ class AppController extends Controller
     public function beforeAction($action)
     {
 
-
         if ($action->id == 'service'){
             $url = $action->id.'-'.$_GET["url"];
         }elseif ($action->id == 'event'){
             $url = $action->id.'-'.$_GET["url"];
         }else{
-            $url = Yii::$app->controller->action->id;
+            $url = Yii::$app->controller->id;
         }
 
 

@@ -1,7 +1,7 @@
 RewriteEngine on
 RewriteBase /
 
-
+Options +FollowSymLinks
 
 #php_value short_open_tag 1
 

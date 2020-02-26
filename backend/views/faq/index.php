@@ -72,7 +72,12 @@ $gridColumns = [
 
     ],
 
-
+    [
+        'attribute' => Yii::t('app', 'lang'),
+        'format'=>'raw',
+        'filter' => Html::activeDropDownList($searchModel, 'lang', ArrayHelper::map(\common\models\Lang::find()->asArray()->all(), 'url', 'url'), ['class' => 'form-control', 'prompt' => 'Все'], ['multiple' => false]),
+        'contentOptions' => ['style' => 'text-align: center; width: 10%'],
+    ],
 
 
     [

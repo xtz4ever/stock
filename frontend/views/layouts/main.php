@@ -19,15 +19,7 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75520804-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-75520804-1');
-    </script>
 
 
     <meta charset="utf-8">
@@ -129,7 +121,7 @@ AppAsset::register($this);
     </div>
 </nav>
 <div data-scroll="header" class="footer-arrow-up scroll_to">
-    <img src="img/footer-arrow-up.png" alt="">
+    <img src="/img/footer-arrow-up.png" alt="">
 </div>
 
 <div canvas="container">

@@ -75,7 +75,7 @@ $this->registerCssFile('css/feedbacks.css',
     }
     ul.ul_xtz >  li > a{
         margin-left: 2%;
-        color: #bb0b3a;
+        color: #f34255;
     }
     ul.ul_xtz > li {
         margin-bottom: 5%;

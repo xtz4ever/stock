@@ -2,7 +2,7 @@
 use yii\bootstrap\ButtonDropdown;
 use yii\helpers\Html;
 use kartik\grid\GridView;
-
+use yii\helpers\ArrayHelper;
 
 $this->title = 'Отзывы';
 $this->params['breadcrumbs'][] = $this->title;
@@ -38,7 +38,12 @@ $gridColumns = [
         'contentOptions' => ['style' => 'text-align: center;'],
     ],
 
-
+    [
+        'attribute' => Yii::t('app', 'lang'),
+        'format'=>'raw',
+        'filter' => Html::activeDropDownList($searchModel, 'lang', ArrayHelper::map(\common\models\Lang::find()->asArray()->all(), 'url', 'url'), ['class' => 'form-control', 'prompt' => 'Все'], ['multiple' => false]),
+        'contentOptions' => ['style' => 'text-align: center; width: 10%'],
+    ],
 
     [
         'label' => 'Статус',

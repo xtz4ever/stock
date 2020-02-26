@@ -1,6 +1,7 @@
 <?php
 namespace app\components;
 use common\models\Category;
+use frontend\components\LangUrlManager;
 use Yii;
 use yii\base\Widget;
 use frontend\controllers\AppController;
@@ -33,11 +34,11 @@ class Header extends Widget
             $phone = false;
         }
 
-
         return $this->render('header',[
             'text' => $text,
             'category' => $category,
             'phone' => $phone,
+            'lang_url' => LangUrlManager::getUrlLink(),
         ]);
     }
 }

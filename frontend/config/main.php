@@ -149,6 +149,7 @@ return [
                     'route' => 'sitemap/index',
                     'suffix' => '',
                 ],
+
                 '<action>' => 'site/<action>',
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models;
+namespace backend\models;
 
 use frontend\models\Lang;
 use Yii;
@@ -43,7 +43,6 @@ class Feedbacs extends \yii\db\ActiveRecord
             [['message', 'lang'], 'string'],
             [['status'], 'integer'],
             [['name', 'email'], 'string', 'max' => 100],
-            [['verifyCode'], ReCaptchaValidator::className(), 'secret' => Yii::$app->params['reCaptcha_secret'], 'when' => function($model){ return !$model->getErrors() && !Yii::$app->request->isAjax /* !Yii::$app->request->post('ajax')*/; },]
 
 
         ];
@@ -62,23 +61,7 @@ class Feedbacs extends \yii\db\ActiveRecord
             'message' => 'Сообщение',
             'status' => 'Status',
             'lang' => 'Язык',
-
-            'verifyCode' => ''
         ];
-    }
-
-
-    public function getAllFedbacks()
-    {
-
-      return  $this::find()->where(['status' => 1, 'lang' => Lang::getCurrent()->url])->orderBy(['id' => SORT_DESC]);
-
-    }
-    public function getAllFedbacksForEvent($parent_id)
-    {
-
-        return  $this::find()->where(['status' => 1,'work_id' => $parent_id, 'lang' => Lang::getCurrent()->url])->orderBy(['id' => SORT_DESC]);
-
     }
 
     public static function getNewFeedbacs(){
@@ -91,9 +74,5 @@ class Feedbacs extends \yii\db\ActiveRecord
         }
     }
 
-    public static function updateStatus($id,$status){
-        $connection = Yii::$app->getDb();
-        $command = $connection->createCommand("UPDATE `feedbacs` SET `status`= :status  WHERE id = :id", [':status' => (int)$status,':id' => (int)$id]);
-        $command->query();
-    }
+
 }

@@ -2112,7 +2112,7 @@ nav[canvas] .mnu_btn{width:100%;height:100%;display:-webkit-box;display:-webkit-
 .accordion.bot .accordion_content_item_btn{position:absolute;right:40px;bottom:40px}
 .accordion:last-of-type,.accordion:last-of-type .accordion_title{margin-bottom:0}
 .accordion .accordion_title{height:60px;line-height:60px;padding-left:20px;padding-right:30px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;cursor:pointer;/*background-color:#f1f1f1;*/position:relative;color:#575858;-webkit-transition:background-color .5s;-o-transition:background-color .5s;transition:background-color .5s}
-.accordion .accordion_title.active,.accordion .accordion_title:hover{background-color:#e5e5e5;color:#575858}
+.accordion .accordion_title.active,.accordion .accordion_title:hover{background-color:#fcc3ca;color:#575858}
 .accordion .accordion_title.active i.fa,.accordion .accordion_title:hover i.fa,.accordion .accordion_title:hover p{/*color:#fff*/color: #575858;}
 .accordion .accordion_title p{display:inline-block;line-height:1.3;overflow:hidden;color:#575858;-webkit-transition:.5s;-o-transition:.5s;transition:.5s}
 .accordion .accordion_title p.right{margin-left:auto;line-height:55px;margin-right:27px}

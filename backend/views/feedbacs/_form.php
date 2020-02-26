@@ -14,6 +14,14 @@ use kartik\widgets\SwitchInput;
     <div class="admin_form_me_custom_medium" style="float: left; width: 40%;height: 550px;">
         <?php $form = ActiveForm::begin(); ?>
 
+        <?= $form->field($model, 'lang')->dropDownList(\common\models\Lang::getAllLangs(), [
+            'id' => 'lang',
+            'prompt' => 'Выберите Язык',
+            [
+                'disabled' => true,
+            ]])->label('Язык'); ?>
+
+
         <div style="width: 48%;float: left;margin-right: 2%">
             <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
         </div>

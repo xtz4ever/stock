@@ -19,7 +19,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 </div>
 
-
+<style>
+    .btn-success{
+        display: none;
+    }
+</style>
 
 
 <?php
@@ -50,11 +54,6 @@ $gridColumns = [
     [
         'attribute' => Yii::t('app', 'lang'),
         'format'=>'raw',
-//        'value' => function ($model, $key, $index, $column) {
-//            $arr = \common\models\Lang::findOne(['id' => $model->master_id]);
-//            return Html::a($arr->full_name, ['/workers/view', 'id' => $arr->id]);
-//
-//        },
         'filter' => Html::activeDropDownList($searchModel, 'lang', ArrayHelper::map(\common\models\Lang::find()->asArray()->all(), 'url', 'url'), ['class' => 'form-control', 'prompt' => 'Все'], ['multiple' => false]),
         'contentOptions' => ['style' => 'text-align: center; width: 10%'],
     ],

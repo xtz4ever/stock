@@ -18,9 +18,13 @@ use yii\helpers\Url;
                     <?php if ($lang->url == 'ru'){?>
                         <?php if(Yii::$app->getRequest()->getLangUrl() == false){
                             $url = '/';
+
                         } else {
                             $url = Yii::$app->getRequest()->getLangUrl();
                         } ?>
+
+
+
                         <a href="<?= Url::to($url); ?>" data-pjax="0"><?=$lang->name;?></a>
 
                     <?php }else{ ?>

@@ -14,7 +14,7 @@
     border-radius: 20px;
     border: none;
     color: #fff;
-    background: #bb0b3a;
+    background: #f34255;
     text-align: center;
     line-height: 27px;
     font-size: 16px;
@@ -43,7 +43,7 @@
     border-radius: 20px;
     display: block;
     color: #fff;
-    background: #bb0b3a;
+    background: #f34255;
     font-size: 12px;
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
@@ -60,7 +60,7 @@
     width: 170px;
     height: 50px;
     color: #fff;
-    background: #bb0b3a;
+    background: #f34255;
     border-radius: 20px;
     border: none;
     -webkit-transition: all .3s linear;
@@ -85,7 +85,7 @@
     line-height: 49px;
     padding: 0 5px;
     border: 1px solid transparent;
-    background-color: #bb0b3a;
+    background-color: #f34255;
     text-transform: none;
     border-radius: 5px;
     color: #fff;
@@ -100,8 +100,8 @@
 
 .main_btn:active, .main_btn:focus, .main_btn:hover {
     background-color: #fff;
-    border: 1px solid #bb0b3a;
-    color: #bb0b3a
+    border: 1px solid #f34255;
+    color: #f34255
 }
 
 .main_btn:focus {
@@ -111,7 +111,7 @@
 .btn_plus {
     width: 70px;
     height: 50px;
-    background: #bb0b3a;
+    background: #f34255;
     color: #fff;
     font-size: 45px;
     border-radius: 10px;
@@ -248,7 +248,7 @@
 }
 
 .feedbacks-section .loader_more a {
-    color: #bb0b3a;
+    color: #f34255;
     position: relative
 }
 
@@ -316,7 +316,7 @@
 }
 
 .form_opinion .form_opinion_wrap .form_container form input:focus, .form_opinion .form_opinion_wrap .form_container form textarea:focus {
-    border: 1px solid #bb0b3a
+    border: 1px solid #f34255
 }
 
 .form_opinion .form_opinion_wrap .form_container form textarea {
@@ -349,7 +349,7 @@
 }
 
 .form_opinion .form_opinion_wrap .opinion .resourse-list li a {
-    color: #bb0b3a;
+    color: #f34255;
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
@@ -364,7 +364,7 @@
     right: 0;
     width: 0;
     height: 1px;
-    background: #bb0b3a;
+    background: #f34255;
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
@@ -511,4 +511,89 @@
 
 #loading-center-absolute > img{
     width: 50px;
+}
+
+.control-label {
+    font-weight: 400;
+    color: #575858;
+    font-size: 20px;
+    display: none!important;
+}
+
+h4 {
+    font-size: 26px;
+    font-weight: 400;
+    color: #575858;
+    margin-bottom: 2%;
+}
+
+.help-block {
+    display: none;
+
+}
+
+.feedbacks-section .loader_more {
+    font-size: 50px;
+
+    position: absolute;
+    width: 100%;
+}
+
+.feedbacks_list {
+    text-align: center;
+    position: relative;
+}
+
+.fl_item, .form_opinion > .container {
+    background-color: #e5e5e5;
+    border-radius: 15px;
+}
+
+.user_name, .feedback_data, .feedback-text > p, .col-sm-6.col-xs-12 {
+    color: #575858;
+!important;
+    opacity: 1;
+}
+
+.feedback-text > p {
+    font-size: 20px;
+}
+
+.feedback-text {
+    text-align: left;
+}
+
+.logo_red_xtz {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 50%;
+
+}
+
+.fl_body {
+    width: 70%;
+}
+
+.feedbacks-section .loader_more a {
+    color: #575858;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+.btn-form{
+    font-size: 20px;
+}
+.сontacts {
+    min-height: 758px;
+    padding-bottom: 5%;
+}
+.сontacts_item_left {
+    font-size: 20px;
+}
+.password-recovery{
+    display: block;
+}
+.alert-success{
+    display: none!important;
 }
