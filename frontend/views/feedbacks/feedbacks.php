@@ -1,6 +1,6 @@
 <?php
 
-use frontend\assets\FeedbacsAsset;
+use frontend\assets\FeedbacksAsset;
 use frontend\assets\AppAsset;
 use \yii\helpers\Url;
 use kartik\form\ActiveForm;
@@ -10,7 +10,8 @@ use yii\widgets\Pjax;
 use himiklab\yii2\recaptcha\ReCaptcha;
 
 
-$this->registerCssFile('css/feedbacks.css');
+
+$this->registerAssetBundle('frontend\assets\FeedbacksAsset');
 ?>
 
 <?php

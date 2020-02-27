@@ -12,9 +12,11 @@ class MyPaginationFeedbacks  extends \yii\widgets\LinkPager
 {
 
     public $options = ['class' => 'loader_more'];
-    public $nextPageLabel = '&nbsp;&#62;';
-
-    public $prevPageLabel = '&#60;&nbsp;';
+//
+//    public $nextPageLabel = '&nbsp;&#62;';
+//    public $prevPageLabel = '&#60;&nbsp;';
+ public $nextPageLabel = '&nbsp;Следующая &nbsp;&#62;';
+    public $prevPageLabel = '&nbsp;&#60;&nbsp;&nbsp;Предыдущая &nbsp;';
 
     protected function renderPageButton($label, $page, $class, $disabled, $active)
     {

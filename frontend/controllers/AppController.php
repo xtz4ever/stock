@@ -43,8 +43,6 @@ class AppController extends Controller
         }else{
             $url = Yii::$app->controller->id;
         }
-
-
         $page = new SeoPage();
         $page_info = $page->getSeo($url);
         $this->getView()->title = $page_info['seo_title'];

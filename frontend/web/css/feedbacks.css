@@ -533,8 +533,8 @@ h4 {
 }
 
 .feedbacks-section .loader_more {
-    font-size: 50px;
-
+    font-size: 20px;
+    margin-top: 25px;
     position: absolute;
     width: 100%;
 }
@@ -545,8 +545,10 @@ h4 {
 }
 
 .fl_item, .form_opinion > .container {
-    background-color: #e5e5e5;
+    /*background-color: #e5e5e5;*/
     border-radius: 15px;
+    border: 1px solid #f34255;
+    /*border-color: #f34255;*/
 }
 
 .user_name, .feedback_data, .feedback-text > p, .col-sm-6.col-xs-12 {
@@ -577,6 +579,9 @@ h4 {
 .feedbacks-section .loader_more a {
     color: #575858;
 }
+.feedbacks-section .loader_more a:hover {
+    color: #f34255;
+}
 
 a:hover {
     text-decoration: none !important;
@@ -597,3 +602,20 @@ a:hover {
 .alert-success{
     display: none!important;
 }
+
+.сontacts {
+    min-height: 758px;
+    padding-bottom: 5%;
+}
+
+.help-block {
+    display: none;
+}
+.password-recovery{
+    display: block;
+}
+.alert-success{
+    display: none!important;
+}
+
+
