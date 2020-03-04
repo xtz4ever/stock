@@ -1,3 +1,4 @@
+<div off-canvas="id-1 left shift">
 <nav class="header_nav_mobile">
     <h3><a href="/services">УСЛУГИ</a></h3>
 
@@ -137,3 +138,4 @@
     </ul>
 
 </nav>
+</div>

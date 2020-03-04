@@ -44,7 +44,10 @@ if (Yii::$app->session->hasFlash('success')){?>
 <?php } ?>
 
 <section class="feedbacks-section">
+    <div class="center-block col-sm-8" style="float: inherit;">
+        <h1 class="center inner"><?=$pageInfo['h1'];?></h1>
 
+    </div>
     <div class="container">
 
         <div class="center-block col-sm-8" style="float: inherit;">
@@ -58,7 +61,7 @@ if (Yii::$app->session->hasFlash('success')){?>
                         <div class="fl_item">
                             <div class="fl_body">
                                 <div id="loading-center-absolute">
-                                    <img src="/img/logo.png" alt="">
+<!--                                    <img src="/img/logo.png" alt="">-->
                                 </div>
 
                                 <div class="user_data_dots">
@@ -96,8 +99,8 @@ if (Yii::$app->session->hasFlash('success')){?>
 <section class="сontacts">
     <div class="container">
         <div class="row">
-            <h1 class="center inner">Оставить отзыв</h1>
-            <div class="сontacts_items clearfix">
+            <h1 class="center inner accordion accordion_title accordion_xtz"><a>Оставить отзыв</a></h1>
+            <div class="сontacts_items clearfix accordion_content">
                 <div class="сontacts_item_left col-lg-4 ">
 
 <!--                    --><?php //if ($pageInfo) {
@@ -109,7 +112,7 @@ if (Yii::$app->session->hasFlash('success')){?>
                 </div>
 
 
-                <div class="сontacts_item_form col-lg-6">
+                <div class="сontacts_item_form col-lg-6 ">
 
                     <?php
                     $form = ActiveForm::begin(
@@ -117,7 +120,7 @@ if (Yii::$app->session->hasFlash('success')){?>
                     );
                     ?>
                     <div>
-<!--                        <label>Имя:</label>-->
+                        <label>Имя:</label>
                         <div class="modal_form_input_wrap">
                             <div class="modal_input_error">Заполните поле
                                 <div class="modal_error_triangle"></div>
@@ -128,7 +131,7 @@ if (Yii::$app->session->hasFlash('success')){?>
                         </div>
                     </div>
                     <div>
-<!--                        <label>E-mail:</label>-->
+                        <label>E-mail:</label>
                         <div class="modal_form_input_wrap">
                             <div class="modal_input_error">Заполните поле
                                 <div class="modal_error_triangle"></div>
@@ -142,7 +145,7 @@ if (Yii::$app->session->hasFlash('success')){?>
 
 
                     <div>
-<!--                        <label>Сообщение !!!:</label>-->
+                        <label>Сообщение:</label>
                         <div class="modal_form_input_wrap dis_block">
                             <div class="modal_input_error">Заполните поле
                                 <div class="modal_error_triangle"></div>

@@ -29,7 +29,7 @@ class Mobilemenu extends Widget
         $skype = Contacts::getContacts('skype');
         $instagram = Contacts::getContacts('instagram');
         $facebook = Contacts::getContacts('facebook');
-        return $this->render('footer',[
+        return $this->render('mobilemenu',[
             'category'=>$category,
             'viber'=>$viber,
             'telephone'=>$telephone,

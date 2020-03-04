@@ -10,9 +10,9 @@ use yii\helpers\Url;
     <?php if ($phone === true) { ?>
         <div class="container" style="text-align: center;padding-top: 13%;">
             <div class="row">
-                <a href="<?= Url::to($lang_url.'/'); ?>" class="logo">
+                <a href="<?= Url::to($lang_url.'/'); ?>" class="logo mobile">
                     <i>
-                        <img src="img/logo.png" alt="">
+                        <img src="/img/logo.png" alt="">
                     </i>
                 </a>
             </div>

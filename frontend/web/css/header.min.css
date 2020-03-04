@@ -609,7 +609,7 @@ i.kz{background-position:-98px -112px}
 @keyframes fade{from{opacity:0}
     to{opacity:1}
 }
-.header{min-height:150px;position:relative;/*background-color: #e5e5e5;*/}
+.header{min-height:150px;position:relative;/*background-color: #ffffff;*/}
 .header_logo{margin-top:30px;margin-left:15px}
 .header_logo span{color:#575858;font:18px Lato-Black,Arial,sans-serif;text-transform:uppercase;vertical-align:middle;position:relative;top:3px}
 .header_logo a:hover{color:inherit}

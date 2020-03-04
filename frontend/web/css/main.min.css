@@ -1644,7 +1644,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 [off-canvas*=left]{width:250px}
 [canvas=container]{-webkit-transform:initial;-ms-transform:initial;transform:initial;background-color:transparent;-webkit-tap-highlight-color:transparent}
 [canvas=container].flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%}
-nav[canvas]{width:70px;height:70px;position:fixed;top:20px;left:20px;display:none;z-index:100;background-color:#e5e5e5}
+nav[canvas]{width:70px;height:70px;position:fixed;top:20px;left:20px;display:none;z-index:100;background-color:#ffffff}
 nav[canvas] .mnu_btn{width:100%;height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 [class*=js-close-],[class*=js-open-],[class*=js-toggle-]{cursor:pointer}
 [off-canvas*=id-1]{padding:20px 20px 0}
@@ -2828,7 +2828,7 @@ nav[canvas] .mnu_btn{width:100%;height:100%;display:-webkit-box;display:-webkit-
     .header_nav_wrap{float:none;text-align:center;display:block;margin:10px auto 30px}
     .header_btn{margin:0}
     .header_modal{margin-top:40px}
-    .header{background-color: #e5e5e5;background-color: #e5e5e5;}
+    .header{background-color: #ffffff;background-color: #ffffff;}
     .сonditions.articles .articles__search input{margin-right:0;margin-bottom:20px}
     .сonditions.articles .articles_btn{margin-bottom:20px}
     .сonditions.articles .articles_btn:first-of-type{padding-left:15px}

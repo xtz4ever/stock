@@ -55,7 +55,7 @@ use himiklab\yii2\recaptcha\ReCaptcha;
 
 
     .fl_item, .form_opinion > .container {
-        background-color: #e5e5e5;
+        background-color: #ffffff;
         border-radius: 15px;
     }
 

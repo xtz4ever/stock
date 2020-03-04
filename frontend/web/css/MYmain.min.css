@@ -2714,7 +2714,7 @@ nav[canvas] .mnu_btn{width:100%;height:100%;display:-webkit-box;display:-webkit-
 .footer .container,.footer ul li{position:relative}
 .footer-arrow-up img{-webkit-transition:all .4s;-o-transition:all .4s;transition:all .4s;margin-top:0}
 .footer-arrow-up:hover img{margin-top:-10px}
-.footer{min-height:120px;background-color: #e5e5e5;border-top:1px solid #eef2f2;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto}
+.footer{min-height:120px;background-color: #ffffff;border-top:1px solid #eef2f2;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto}
 .footer nav{display:inline-block;margin-top:47px}
 .footer ul{padding:0 0 0 16px;margin:0}
 .footer ul li .footer_dropdown.active,.footer ul li:hover .footer_dropdown{visibility:visible;opacity:1;padding-bottom:6px}
@@ -2790,7 +2790,7 @@ nav[canvas] .mnu_btn{width:100%;height:100%;display:-webkit-box;display:-webkit-
 .header_nav_wrap{float:none;text-align:center;display:block;margin:10px auto 30px}
 .header_btn{margin:0}
 .header_modal{margin-top:40px}
-.header{background-color: #e5e5e5;}
+.header{background-color: #ffffff;}
 .сonditions.articles .articles__search input{margin-right:0;margin-bottom:20px}
 .сonditions.articles .articles_btn{margin-bottom:20px}
 .сonditions.articles .articles_btn:first-of-type{padding-left:15px}
@@ -3040,7 +3040,7 @@ label.check span,label.radio span{font-size:16px!important}
 
 }
 header{
-    background-color:#e5e5e5;
+    background-color:#ffffff;
 }
 .header_btn{
     display: none;

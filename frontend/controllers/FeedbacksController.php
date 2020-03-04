@@ -128,8 +128,8 @@ class FeedbacksController extends AppController
         $countQuery = clone $feedbacks;
         $page = new Pagination([
             'totalCount' => $countQuery->count(),
-            'pageSize' => 1,
-            'defaultPageSize' => 1,
+            'pageSize' => 5,
+            'defaultPageSize' => 5,
             'pageParam' => 'page',
             'forcePageParam' => false,
         ]);

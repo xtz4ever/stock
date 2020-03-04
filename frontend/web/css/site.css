@@ -529,3 +529,6 @@ td.visible-print{display:table-cell !important}
 .logo img{
     width: 25%;
 }
+.logo.mobile img{
+    width: 80%;
+}

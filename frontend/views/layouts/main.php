@@ -6,6 +6,8 @@
 
 use app\components\Header;
 use app\components\ModalFormWidget;
+use common\models\Category;
+use common\models\Contacts;
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use yii\helpers\Html;
@@ -108,7 +110,7 @@ AppAsset::register($this);
 <!--</div>-->
 
 
-<nav canvas="" class="">
+<nav canvas="" class="" style="">
     <div class="mnu_btn">
         <label id="nav-button-label">
             <div id="nav-lines">
@@ -136,14 +138,13 @@ AppAsset::register($this);
 
 
 
-    <?= \app\components\Footer::widget() ?>
+    <?= \app\components\Footer::widget(); ?>
 
 
 </div>
-<div off-canvas="id-1 left shift">
-    <?= \app\components\Mobilemenu::widget() ?>
 
-</div>
+    <?=  \app\components\Mobilemenu::widget(); ?>
+
 <div off-canvas="id-2 right push">
 </div>
 <div off-canvas="id-3 top overlay">
