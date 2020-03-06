@@ -33,6 +33,10 @@ class AppController extends Controller
         ];
     }
 
+    public $translates = [];
+
+
+
     public function beforeAction($action)
     {
 
@@ -62,7 +66,7 @@ class AppController extends Controller
             'content' => $page_info['keywords']
         ]);
 
-
+        $this->translates = Translates::getTranslate(Yii::$app->controller->id);
         return parent::beforeAction($action, ['page_info' => $page_info]);
     }
 
@@ -78,14 +82,6 @@ class AppController extends Controller
             $this->getView()->title = Yii::$app->controller->action->id;
         }
     }
-
-    public function varD($var)
-    {
-        echo '<pre style=" z-index: 9999999;margin-left: 10%;margin-top: 10%;overflow-x: auto;">';
-        var_dump($var);
-        echo '</pre>';
-    }
-
 
     protected function performAjaxValidation($model)
     {
@@ -115,16 +111,9 @@ class AppController extends Controller
 
     public function getText()
     {
-
-        $text = LangTextForSite::actionTEXT(Yii::$app->controller->action->id);
-
-        return $text;
+        return LangTextForSite::actionTEXT(Yii::$app->controller->action->id);
     }
 
-    public function actionYmtest()
-    {
-        file_put_contents(__DIR__ . '/yandex-money-response.txt', serialize($_POST));
-    }
 
     public function isMobile()
     {

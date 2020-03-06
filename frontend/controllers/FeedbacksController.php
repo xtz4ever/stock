@@ -155,6 +155,7 @@ class FeedbacksController extends AppController
                 'lang' => $lang,
                 'page' => $page,
                 'page_text' => $page_text,
+                'translates' => $this->translates,
             ]);
     }
 
