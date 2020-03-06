@@ -1,6 +1,7 @@
 <?php
 namespace app\components;
 use common\models\Category;
+use common\models\Translates;
 use frontend\components\LangUrlManager;
 use Yii;
 use yii\base\Widget;
@@ -34,8 +35,10 @@ class Header extends Widget
             $phone = false;
         }
 
+        $translates = Translates::find()->where(['page' => 'header', 'lang' => LangUrlManager::getLang()])->all();
         return $this->render('header',[
             'text' => $text,
+            'translates' => $translates,
             'category' => $category,
             'phone' => $phone,
             'lang_url' => LangUrlManager::getUrlLink(),

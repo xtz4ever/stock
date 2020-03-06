@@ -42,4 +42,7 @@ class LangUrlManager extends UrlManager
         }
         return $lang_url;
     }
+    public static function getLang(){
+        return substr(Yii::$app->language, 0, 2);
+    }
 }

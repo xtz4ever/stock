@@ -8,7 +8,7 @@ use common\models\SeoPage;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
 use frontend\models\LangTextForSite;
-
+use common\models\Translates;
 /**
  * App controller
  */
