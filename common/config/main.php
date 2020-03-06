@@ -32,8 +32,8 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=studio_db',
-            'username' => 'mysql',
-            'password' => 'mysql',
+            'username' => 'alex',
+            'password' => 'root',
             'enableSchemaCache' => false,
             'charset' => 'utf8',
             'schemaCacheDuration' => 3600,
