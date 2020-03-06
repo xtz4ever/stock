@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use frontend\components\LangUrlManager;
 use Yii;
 
 /**
@@ -56,5 +57,14 @@ class Translates extends \yii\db\ActiveRecord
     public static function find()
     {
         return new TranslatesQuery(get_called_class());
+    }
+
+    public static function getTranslate($key){
+        $translates_query = Translates::find()->where(['page' => $key, 'lang' => LangUrlManager::getLang()])->all();
+        $translates = [];
+        foreach ($translates_query as $translate){
+            $translates[$translate['text_key']] = $translate['text_value'];
+        }
+        return $translates;
     }
 }

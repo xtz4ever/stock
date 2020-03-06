@@ -22,7 +22,7 @@ class Footer extends Widget
 
         // Категории
         $category = Category::getCategories();
-        $translates = Translates::find()->where(['page' => 'header', 'lang' => LangUrlManager::getLang()])->all();
+        $translates = Translates::getTranslate('header');
 
         return $this->render('footer',[
             'category'=>$category,

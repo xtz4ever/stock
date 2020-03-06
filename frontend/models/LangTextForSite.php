@@ -8,7 +8,7 @@ use yii\base\Model;
 
 class LangTextForSite extends Model
 {
-    public function actionTEXT($action)
+    public static function actionTEXT($action)
     {
         $text = [];
 

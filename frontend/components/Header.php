@@ -35,7 +35,7 @@ class Header extends Widget
             $phone = false;
         }
 
-        $translates = Translates::find()->where(['page' => 'header', 'lang' => LangUrlManager::getLang()])->all();
+        $translates = Translates::getTranslate('header');
         return $this->render('header',[
             'text' => $text,
             'translates' => $translates,

@@ -116,8 +116,7 @@ class AppController extends Controller
     public function getText()
     {
 
-        $model = new LangTextForSite();
-        $text = $model->actionTEXT(Yii::$app->controller->action->id);
+        $text = LangTextForSite::actionTEXT(Yii::$app->controller->action->id);
 
         return $text;
     }
