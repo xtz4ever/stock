@@ -29,7 +29,7 @@ $lang_url = LangUrlManager::getUrlLink();
                 <nav>
                     <ul>
                         <li id="footer-dropdown">
-                            <a href="<?= Url::to($lang_url.'/services'); ?>">Услуги</a>
+                            <a href="<?= Url::to($lang_url.'/services'); ?>"><?=$translates['services'];?></a>
                             <i class="fa fa-angle-down"  ></i>
                             <div class="footer_dropdown">
                                 <i>
@@ -52,9 +52,9 @@ $lang_url = LangUrlManager::getUrlLink();
                     </ul>
                 </nav>
             </div>
-            <div class="col-sm-6 col-lg-3"> <a href="<?= Url::to($lang_url.'/feedbacks'); ?>">Отзывы</a></div>
-            <div class="col-sm-6 col-lg-3"><a href="<?= Url::to($lang_url.'/createcontacts'); ?>">Контакты</a></div>
-            <div class="col-sm-6 col-lg-3"><a href="<?= Url::to($lang_url.'/faq'); ?>">FAQ</a></div>
+            <div class="col-sm-6 col-lg-3"> <a href="<?= Url::to($lang_url.'/faq'); ?>"><?=$translates['faq'];?></a></div>
+            <div class="col-sm-6 col-lg-3"><a href="<?= Url::to($lang_url.'/feedbacks'); ?>"><?=$translates['feedbacks'];?></a></div>
+            <div class="col-sm-6 col-lg-3"><a href="<?= Url::to($lang_url.'/createcontacts'); ?>"><?=$translates['createcontacts'];?></a></div>
         </div>
     </div>
 </footer>

@@ -29,7 +29,7 @@ use yii\helpers\Url;
                     </a>
                     <ul>
                         <li>
-                            <a href="<?= Url::to($lang_url.'/services'); ?>">Услуги</a>
+                            <a href="<?= Url::to($lang_url.'/services'); ?>"><?=$translates['services'];?></a>
                             <i class="fa fa-angle-down"></i>
                             <div class="header_dropdown menu_xtz">
                                 <ul>
@@ -46,17 +46,17 @@ use yii\helpers\Url;
                             </div>
                         </li>
                         <li>
-                            <a href="<?= Url::to($lang_url.'/faq'); ?>">FAQ</a>
+                            <a href="<?= Url::to($lang_url.'/faq'); ?>"><?=$translates['faq'];?></a>
                         </li>
                         <li>
-                            <a href="<?= Url::to($lang_url.'/feedbacks'); ?>">Отзывы</a>
+                            <a href="<?= Url::to($lang_url.'/feedbacks'); ?>"><?=$translates['feedbacks'];?></a>
                         </li>
 
                         <!--                        <li>-->
                         <!--                            <a data-modal="modal-2" class="modal_xtz" style="width: 100px;height: 25px" href="#">Контакты</a>-->
                         <!--                        </li>-->
                         <li>
-                            <a href="<?= Url::to($lang_url.'/createcontacts'); ?>">Контакты</a>
+                            <a href="<?= Url::to($lang_url.'/createcontacts'); ?>"><?=$translates['createcontacts'];?></a>
                         </li>
 
                         <?=\frontend\widgets\WLang::widget();?>
