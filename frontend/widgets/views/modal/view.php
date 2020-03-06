@@ -5,7 +5,7 @@ use kartik\form\ActiveForm;
 use yii\helpers\Html;
 use common\models\AccProduct;
 use himiklab\yii2\recaptcha\ReCaptcha;
-$lang = substr(Yii::$app->language, 0, 2);
+$lang = $this->lang;
 
 
 ?>

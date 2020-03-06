@@ -12,24 +12,6 @@ use himiklab\yii2\recaptcha\ReCaptcha;
 
 $this->registerAssetBundle('frontend\assets\FeedbacksAsset');
 
-//if (isset($meta['seo_title']) && !empty($meta['seo_title'])) {
-//    $this->title = $meta['seo_title'];
-//} else {
-//    $this->title = "Контакты";
-//}
-//
-//$this->registerMetaTag([
-//    'name' => 'title',
-//    'content' => $meta['title']
-//]);
-//$this->registerMetaTag([
-//    'name' => 'description',
-//    'content' => $meta['description']
-//]);
-//$this->registerMetaTag([
-//    'name' => 'keywords',
-//    'content' => $meta['keywords']
-//]);
 
 
 if (Yii::$app->session->hasFlash('success')){?>
@@ -84,7 +66,10 @@ if (Yii::$app->session->hasFlash('success')){?>
                                 <?php foreach ($contacts_viber as $val) { ?>
                                     <li>
                                         <div class="contact_i">
-                                            <i class="fab fa-viber"></i>
+
+                                            <img style="width: 20px;"
+                                                 src="/img/iconss/viber-brands.png"
+                                                 alt="">
                                         </div>
                                         <?php
                                         $viber_number = str_replace(' ', '', $val['text']);
@@ -109,7 +94,7 @@ if (Yii::$app->session->hasFlash('success')){?>
                                         <!-- Load Facebook SDK for JavaScript -->
                                         <div id="fb-root">
                                             <div class="contact_i">
-                                                <img style="width: 19px;margin-top: -5px;"
+                                                <img style="width: 20px;margin-top: -5px;"
                                                      src="/img/facebook-square.svg"
                                                      alt="">
                                             </div>

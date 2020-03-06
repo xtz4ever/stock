@@ -457,9 +457,9 @@ i.kz{background-position:-98px -112px}
 .popup.get-test .dm-modal .select .drop{-webkit-border-radius:5px;border-radius:5px;border-top:inherit}
 .popup.get-test .dm-modal .get-test-items-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .popup.get-test .dm-modal button{min-width:270px;height:38px;line-height:38px}
-.popup.pop_order_form .dm-modal{width:630px;padding:10px 30px}
+.popup.pop_order_form .dm-modal{width:500px;padding:10px 30px}
 .popup.pop_order_form .modal_title{color:#575858;font:28px Lato-Bold,Arial,sans-serif;line-height:1.6;margin-bottom:10px}
-.popup.pop_order_form .inner_form{width:570px;padding:30px;background-color:#ebf9f1}
+.popup.pop_order_form .inner_form{width:435px;padding:30px;background-color:#ebf9f1}
 .popup.pop_order_form button{min-width:190px;-webkit-border-radius:23px;border-radius:23px;-webkit-box-shadow:none;box-shadow:none;font-size:14px}
 .popup.pop_order_form .quick_order_tab{display:none!important}
 .popup.pop_order_form .quick_order_tab.active{display:block!important}
@@ -551,7 +551,7 @@ i.kz{background-position:-98px -112px}
 .check input[type=checkbox]:checked+i.fa-2,.check input[type=radio]:checked+i.fa-2,.radio input[type=checkbox]:checked+i.fa-2,.radio input[type=radio]:checked+i.fa-2{display:inline-block}
 .modal_form_input_wrap{position:relative;display:inline-block}
 .modal_form_input_wrap.dis_block{display:block}
-.modal_form_input_wrap input{width:370px;height:40px;padding-left:20px;border:1px solid #cdcdcd;-webkit-border-radius:5px;border-radius:5px;color:#575858;text-indent:0;-webkit-transition:border .5s;-o-transition:border .5s;transition:border .5s;font-size:14px}
+.modal_form_input_wrap input{/*width:370px;*/height:40px;padding-left:20px;border:1px solid #cdcdcd;-webkit-border-radius:5px;border-radius:5px;color:#575858;text-indent:0;-webkit-transition:border .5s;-o-transition:border .5s;transition:border .5s;font-size:14px}
 .modal_form_input_wrap input::-webkit-input-placeholder{color:#cdcdcd;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
 .modal_form_input_wrap input:-moz-placeholder{color:#cdcdcd;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
 .modal_form_input_wrap input::-moz-placeholder{color:#cdcdcd;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}

@@ -599,7 +599,7 @@
 .fa-gg:before{content:"\f260"}
 .fa-gg-circle:before{content:"\f261"}
 .fa-tripadvisor:before{content:"\f262"}
-.fa-viber{background-image:url("../icons/viber-brands.svg");}
+.fa-viber{background-image:url("/img/iconss/viber-brands.png");}
 .fa-odnoklassniki:before{content:"\f263"}
 .fa-odnoklassniki-square:before{content:"\f264"}
 .fa-get-pocket:before{content:"\f265"}
@@ -2269,7 +2269,7 @@ nav[canvas] .mnu_btn{width:100%;height:100%;display:-webkit-box;display:-webkit-
 .сontacts .сontacts_item_left p{display:inline-block}
 .сontacts .сontacts_item_left a{display:inline-block;color:#575858}
 .сontacts .сontacts_item_left a:active,.сontacts .сontacts_item_left a:focus,.сontacts .сontacts_item_left a:hover{text-decoration:none}
-.сontacts .сontacts_item_left i{width:20px;height:20px;font-size:18px}
+.сontacts .сontacts_item_left i{width:20px;height:20px;font-size:30px}
 .сontacts .сontacts_item_form h3{margin-top:3px;margin-bottom:10px}
 .сontacts .сontacts_item_form form>div{margin-bottom:15px}
 .сontacts .сontacts_item_form label{display:block;color:#646c73;font-size:14px}

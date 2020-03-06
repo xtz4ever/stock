@@ -8,37 +8,39 @@ use yii\helpers\Html;
 use yii\widgets\LinkPager;
 use yii\widgets\Pjax;
 use himiklab\yii2\recaptcha\ReCaptcha;
-
+use yii\bootstrap\Modal;
 
 
 $this->registerAssetBundle('frontend\assets\FeedbacksAsset');
 ?>
 
-<?php
-if (Yii::$app->session->hasFlash('success')){?>
-    <!-- Модальное окно unsuccessful-payment -->
-    <div class="popup password-recovery" data-modal="password-recovery">
-        <div class="dm-table">
-            <div class="dm-cell">
-                <div class="dm-modal">
-                    <a href="#" class="close">
-                        <i class="fa fa-close"></i>
-                    </a>
-                    <div class="password-recovery__top-level">
+<?php if (Yii::$app->session->hasFlash('success')){?>
 
-                        <p><?=$page_text['success_message'];?></p>
+<div class="popup pop_order_form password-recovery" data-modal="modal-2" style="display: block">
+    <div class="dm-table">
+        <div class="dm-cell">
+            <div class="dm-modal">
+                <a href="#" class="close">
 
-                    </div>
+                </a>
+                <p class="modal_title">
+                    Оставить отзыв
+                </p>
+
+                <div class="inner_form">
+                    <?='SUCCESS';?>
+
                 </div>
             </div>
         </div>
-        <div class="overlay">
-        </div>
     </div>
+</div>
+
 
     <script>
         setTimeout(function () {
-            $('.password-recovery').css({'display':'none'});
+            // $('.password-recovery').css({'display':'none'});
+            $('.password-recovery').fadeOut('slow');
         }, 5000);
     </script>
 <?php } ?>
@@ -93,13 +95,95 @@ if (Yii::$app->session->hasFlash('success')){?>
     </div>
 </section>
 
+<div class="popup pop_order_form" data-modal="modal-1">
+    <div class="dm-table">
+        <div class="dm-cell">
+            <div class="dm-modal">
+                <a href="#" class="close">
 
+                </a>
+                <p class="modal_title">
+                    Оставить отзыв
+                </p>
+                <p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с
+                    вами
+                    свяжется.</p>
+            <div class="inner_form">
+                <?php
+                $form = ActiveForm::begin(
+
+                );
+                ?>
+                <div>
+                    <label><?=$translates['form_label_name'];?></label>
+                    <div class="modal_form_input_wrap">
+                        <div class="modal_input_error">Заполните поле
+                            <div class="modal_error_triangle"></div>
+                            <div class="modal_error_chest_img"></div>
+                        </div>
+                        <?= $form->field($model, 'name')->textInput(['class' => 'modal_form_input', 'placeholder' => "Введите ваше имя."]); ?>
+
+                    </div>
+                </div>
+                <div>
+                    <label>E-mail:</label>
+                    <div class="modal_form_input_wrap">
+                        <div class="modal_input_error">Заполните поле
+                            <div class="modal_error_triangle"></div>
+                            <div class="modal_error_chest_img"></div>
+                        </div>
+                        <?= $form->field($model, 'email')->textInput(['class' => '', 'placeholder' => "Ваш действующий email адрес"]); ?>
+
+
+                    </div>
+                </div>
+
+
+                <div>
+                    <label>Сообщение:</label>
+                    <div class="modal_form_input_wrap dis_block">
+                        <div class="modal_input_error">Заполните поле
+                            <div class="modal_error_triangle"></div>
+                            <div class="modal_error_chest_img"></div>
+                        </div>
+                        <?= $form->field($model, 'message')->textarea(['rows' => '6', 'class' => '', 'placeholder' => 'Введите сообщение.']) ?>
+
+
+                    </div>
+                </div>
+                <div style="display: none">
+                    <?= $form->field($model, 'date')->hiddenInput()->label(''); ?>
+
+                    <?= $form->field($model, 'status')->hiddenInput(['value' => 0])->label(''); ?>
+                </div>
+
+               <!-- --><?php /*echo $form->field($model, 'reCaptcha', ['enableAjaxValidation' => false])->widget(ReCaptcha::className(),
+                    ['siteKey' => Yii::$app->params['reCaptcha_siteKey'] , 'theme' => 'white']
+                )->label('') */?>
+
+
+                <?= Html::submitButton('Отправить', ['class' => 'btn-form']) ?>
+                <?php ActiveForm::end(); ?>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+    </div>
+</div>
 
 <!-- Секция сontacts -->
 <section class="сontacts">
     <div class="container">
+
         <div class="row">
-            <h1 class="center inner accordion accordion_title accordion_xtz"><a>Оставить отзыв</a></h1>
+
+<!--            <h1 class="center inner accordion accordion_title accordion_xtz"><a>Оставить отзыв</a></h1>-->
+            <h1 class="center inner ">
+                <a data-modal="modal-1" class="modal_xtz"  href="#">Оставить отзыв</a>
+            </h1>
+
             <div class="сontacts_items clearfix accordion_content">
                 <div class="сontacts_item_left col-lg-4 ">
 
@@ -108,68 +192,6 @@ if (Yii::$app->session->hasFlash('success')){?>
 //                            echo $pageInfo["description"];
 //                        }
 //                    } ?>
-
-                </div>
-
-
-                <div class="сontacts_item_form col-lg-6 ">
-
-                    <?php
-                    $form = ActiveForm::begin(
-
-                    );
-                    ?>
-                    <div>
-                        <label>Имя:</label>
-                        <div class="modal_form_input_wrap">
-                            <div class="modal_input_error">Заполните поле
-                                <div class="modal_error_triangle"></div>
-                                <div class="modal_error_chest_img"></div>
-                            </div>
-                            <?= $form->field($model, 'name')->textInput(['class' => 'modal_form_input', 'placeholder' => "Введите ваше имя."]); ?>
-
-                        </div>
-                    </div>
-                    <div>
-                        <label>E-mail:</label>
-                        <div class="modal_form_input_wrap">
-                            <div class="modal_input_error">Заполните поле
-                                <div class="modal_error_triangle"></div>
-                                <div class="modal_error_chest_img"></div>
-                            </div>
-                            <?= $form->field($model, 'email')->textInput(['class' => '', 'placeholder' => "Ваш действующий email адрес"]); ?>
-
-
-                        </div>
-                    </div>
-
-
-                    <div>
-                        <label>Сообщение:</label>
-                        <div class="modal_form_input_wrap dis_block">
-                            <div class="modal_input_error">Заполните поле
-                                <div class="modal_error_triangle"></div>
-                                <div class="modal_error_chest_img"></div>
-                            </div>
-                            <?= $form->field($model, 'message')->textarea(['rows' => '6', 'class' => '', 'placeholder' => 'Введите сообщение.']) ?>
-
-
-                        </div>
-                    </div>
-                    <div style="display: none">
-                        <?= $form->field($model, 'date')->hiddenInput()->label(''); ?>
-
-                        <?= $form->field($model, 'status')->hiddenInput(['value' => 0])->label(''); ?>
-                    </div>
-
-                    <?= $form->field($model, 'reCaptcha', ['enableAjaxValidation' => false])->widget(ReCaptcha::className(),
-                        ['siteKey' => Yii::$app->params['reCaptcha_siteKey'] , 'theme' => 'white']
-                    )->label('') ?>
-
-
-                    <?= Html::submitButton('Отправить', ['class' => 'btn-form']) ?>
-                    <?php ActiveForm::end(); ?>
-
                 </div>
             </div>
         </div>

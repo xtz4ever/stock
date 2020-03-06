@@ -250,7 +250,7 @@ class SellerController extends AppController
 
         $model = new ProviderAccountsForActivationRequired();
         $model = $model->getOneTakeOrder($id);
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
         if ($lang == 'ru'){
             $product_name = $model["providerAccountType"]->account_name;
         }else{
@@ -485,7 +485,7 @@ class SellerController extends AppController
         $page_text = $this->getText();
 
         // Язык
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
 
         $model = new ProviderListOfPayments();
 

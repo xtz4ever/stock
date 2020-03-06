@@ -137,9 +137,9 @@ class ContactForm extends \yii\db\ActiveRecord
 
 
              Yii::$app->mailer->compose()
-            ->setFrom([Yii::$app->params['stockEmail'] => 'vavilovdesign'])
+            ->setFrom([Yii::$app->params['stockEmail'] => 'DANA ATELIER'])
             ->setTo(Yii::$app->params['supportEmail'])
-//            ->setTo('xtz4ever@yandex.ua')
+//            ->setTo('xtzeve+1@gmail.com')
             ->setSubject($subject)
             ->setTextBody($message)
             ->setHtmlBody($message)

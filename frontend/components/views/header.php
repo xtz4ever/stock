@@ -4,7 +4,7 @@ use yii\helpers\Url;
 
 <header id="header" class="header">
     <?php
-/*    $lang = substr(Yii::$app->language, 0, 2);
+/*    $lang = $this->lang;
 
     */?>
     <?php if ($phone === true) { ?>

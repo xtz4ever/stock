@@ -57,7 +57,7 @@ class SeoPage extends \yii\db\ActiveRecord
     }
 
     /*Мета теги + H1 + Текст для страниц*/
-    public function getSeo($page)
+    public static function getSeo($page)
     {
         $page = SeoPage::find()->where(['page_name' => $page, 'lang' => Lang::getCurrent()->url])->one();
 

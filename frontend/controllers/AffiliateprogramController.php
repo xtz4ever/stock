@@ -66,7 +66,7 @@ class AffiliateprogramController extends AppController
         $page_text = $this->getText();
 
         // Язык
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
 
 
         return $this->render('affiliate-program-main', [
@@ -296,7 +296,7 @@ class AffiliateprogramController extends AppController
         $page_text = $this->getText();
 
         // Язык
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
         // Форма в хедере с ссылкой
         if (isset(Yii::$app->request->post()["PartnerReferalLinks"])) {
             $model = new PartnerReferalLinks();
@@ -514,7 +514,7 @@ class AffiliateprogramController extends AppController
         $all_cat_tab = PartnerPromotionalCategory::getAllCategory();
         $all_cat_with_banners = PartnerPromotionalCategory::getAllCategoryWithBanner();
         // Язык
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
         $model = new PartnerReferalLinks();
         $link = $model->getPartnerLastLink(Yii::$app->user->identity->getId());
 

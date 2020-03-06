@@ -117,11 +117,11 @@ class FeedbacksController extends AppController
     public function actionIndex()
     {
         /* H1, description */
-        $page = new SeoPage();
-        $page_info = $page->getSeo(Yii::$app->controller->id);
+        
+        $page_info = SeoPage::getSeo(Yii::$app->controller->id);
 
         $model = new Feedbacs();
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
         $feedbacks = $model->getAllFedbacks($lang);
 
 
@@ -140,13 +140,17 @@ class FeedbacksController extends AppController
 
 
 
-        if ($model->load(\Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(\Yii::$app->request->post())) {
+            $model->lang = $this->lang;
+            $model->save();
 
-            ContactForm::sendEmailMy('Feedbacs', $model->name, $model->email,'', '', $model->message);
+            //  TODO
+            //   ContactForm::sendEmailMy('Feedbacs', $model->name, $model->email,'', '', $model->message);
 
-            Yii::$app->session->setFlash('success','');
-            $model = new Feedbacs();
+            Yii::$app->session->setFlash('success','SUCCESS');
+            return $this->refresh();
         }
+
         return $this->render('feedbacks',
             [
                 'model' => $model,

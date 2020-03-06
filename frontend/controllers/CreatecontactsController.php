@@ -117,14 +117,14 @@ class CreatecontactsController extends AppController
     {
 
         $model = new ContactForm();
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
 
         // Все слова и предложения в зависимости от страницы
         $page_text = $this->getText();
 
         /* H1, description */
-        $page = new SeoPage();
-        $page_info = $page->getSeo(Yii::$app->controller->action->id);
+        
+        $page_info = SeoPage::getSeo(Yii::$app->controller->action->id);
         $contacts_telephone = Contacts::getContacts('telephone');
         $contacts_viber = Contacts::getContacts('viber');
         $contacts_faceboock = Contacts::getContacts('facebook');

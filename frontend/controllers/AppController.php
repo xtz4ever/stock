@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use frontend\models\Lang;
 use Yii;
 use yii\web\Controller;
 use common\models\SeoPage;
@@ -34,6 +35,7 @@ class AppController extends Controller
     }
 
     public $translates = [];
+    public $lang = '';
 
 
 
@@ -47,8 +49,8 @@ class AppController extends Controller
         }else{
             $url = Yii::$app->controller->id;
         }
-        $page = new SeoPage();
-        $page_info = $page->getSeo($url);
+
+        $page_info = SeoPage::getSeo($url);
         $this->getView()->title = $page_info['seo_title'];
 
 
@@ -67,13 +69,14 @@ class AppController extends Controller
         ]);
 
         $this->translates = Translates::getTranslate(Yii::$app->controller->id);
+        $this->lang = Lang::getCurrent()->url;
         return parent::beforeAction($action, ['page_info' => $page_info]);
     }
 
     public function PageInfo()
     {
-        $page = new SeoPage();
-        $page_info = $page->getSeo(Yii::$app->controller->action->id);
+
+        $page_info = SeoPage::getSeo(Yii::$app->controller->action->id);
         if ($page_info) {
 
 //            $this->getView()->title = $page_info['seo_title'];

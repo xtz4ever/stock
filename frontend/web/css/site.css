@@ -513,7 +513,7 @@ td.visible-print{display:table-cell !important}
 }
 @media print{.hidden-print{display:none !important}
 }
-.dm-modal{opacity:0.8;}
+.dm-modal{opacity:1;}
 .countries_and_prices_wrap.center-block.col-sm-4 > p{font-size:30px;text-align:center;}
 .countries_and_prices_wrap.center-block.col-sm-6 > p{font-size:30px;text-align:center;}
 .countries_and_prices_wrap.center-block.col-sm-8 > p{font-size:30px;text-align:center;}

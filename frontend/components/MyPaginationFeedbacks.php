@@ -16,8 +16,7 @@ class MyPaginationFeedbacks  extends \yii\widgets\LinkPager
 //
     public $nextPageLabel = '';
     public $prevPageLabel = '';
-// public $nextPageLabel = '&nbsp;Следующая &nbsp;&#62;';
-//    public $prevPageLabel = '&nbsp;&#60;&nbsp;&nbsp;Предыдущая &nbsp;';
+
 
 
 

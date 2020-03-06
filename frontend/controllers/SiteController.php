@@ -119,8 +119,8 @@ class SiteController extends AppController
         $category = Category::getCategories();
         /* H1, description */
 
-        $page = new SeoPage();
-        $page_info = $page->getSeo(Yii::$app->controller->action->id);
+        
+        $page_info = SeoPage::getSeo(Yii::$app->controller->action->id);
        
         return $this->render('index',
             [
@@ -184,14 +184,14 @@ class SiteController extends AppController
     {
 
         $model = new ContactForm();
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
 
         // Все слова и предложения в зависимости от страницы
         $page_text = $this->getText();
 
         /* H1, description */
-        $page = new SeoPage();
-        $page_info = $page->getSeo(Yii::$app->controller->action->id);
+        
+        $page_info = SeoPage::getSeo(Yii::$app->controller->action->id);
         $contacts_telephone = Contacts::getContacts('telephone');
         $contacts_viber = Contacts::getContacts('viber');
         $contacts_faceboock = Contacts::getContacts('facebook');
@@ -284,11 +284,11 @@ class SiteController extends AppController
     public function actionFeedbacks()
     {
         /* H1, description */
-        $page = new SeoPage();
-        $page_info = $page->getSeo(Yii::$app->controller->action->id);
+        
+        $page_info = SeoPage::getSeo(Yii::$app->controller->action->id);
 
         $model = new Feedbacs();
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
         $feedbacks = $model->getAllFedbacks($lang);
 
 
@@ -329,8 +329,8 @@ class SiteController extends AppController
     {
 
         /* H1, description */
-        $page = new SeoPage();
-        $page_info = $page->getSeo(Yii::$app->controller->action->id);
+        
+        $page_info = SeoPage::getSeo(Yii::$app->controller->action->id);
 
         $all_questions = Faq::getAllQuestions();
         return $this->render('faq', [
@@ -351,8 +351,8 @@ class SiteController extends AppController
         $page_text = $this->getText();
 
         /* H1, description */
-        $page = new SeoPage();
-        $page_info = $page->getSeo(Yii::$app->controller->action->id);
+        
+        $page_info = SeoPage::getSeo(Yii::$app->controller->action->id);
 
 
         return $this->render('our-works',
@@ -371,8 +371,8 @@ class SiteController extends AppController
         $url = 'service-'.$url;
 
         /* H1, description */
-        $page = new SeoPage();
-        $page_info = $page->getSeo($url);
+        
+        $page_info = SeoPage::getSeo($url);
 
         // Категории с продуктами и ценами
         $category = new Category();
@@ -411,8 +411,8 @@ class SiteController extends AppController
     public function actionServices()
     {
         /* H1, description */
-        $page = new SeoPage();
-        $page_info = $page->getSeo(Yii::$app->controller->action->id);
+        
+        $page_info = SeoPage::getSeo(Yii::$app->controller->action->id);
 
         // Категории с продуктами и ценами
         $category = new Category();
@@ -436,8 +436,8 @@ class SiteController extends AppController
         $url = 'event-'.$url;
 //        $this->layout='site';
         /* H1, description */
-        $page = new SeoPage();
-        $page_info = $page->getSeo($url);
+        
+        $page_info = SeoPage::getSeo($url);
 
 
 
@@ -448,7 +448,7 @@ class SiteController extends AppController
 
 
         $model = new Feedbacs();
-        $lang = substr(Yii::$app->language, 0, 2);
+        $lang = $this->lang;
         $feedbacks = $model->getAllFedbacksForEvent($parent_id);
         $countQuery = clone $feedbacks;
         $page = new Pagination([

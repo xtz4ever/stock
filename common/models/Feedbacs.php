@@ -42,8 +42,9 @@ class Feedbacs extends \yii\db\ActiveRecord
             [['date'], 'safe'],
             [['message', 'lang'], 'string'],
             [['status'], 'integer'],
+            [['email'], 'email'],
             [['name', 'email'], 'string', 'max' => 100],
-            [['verifyCode'], ReCaptchaValidator::className(), 'secret' => Yii::$app->params['reCaptcha_secret'], 'when' => function($model){ return !$model->getErrors() && !Yii::$app->request->isAjax /* !Yii::$app->request->post('ajax')*/; },]
+//            [['verifyCode'], ReCaptchaValidator::className(), 'secret' => Yii::$app->params['reCaptcha_secret'], 'when' => function($model){ return !$model->getErrors() && !Yii::$app->request->isAjax /* !Yii::$app->request->post('ajax')*/; },]
 
 
         ];

@@ -97,7 +97,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'enableStrictParsing' => false,
-            'class' => 'frontend\components\LangUrlManager',
+//            'class' => 'frontend\components\LangUrlManager',
+//            'class' => 'yii\web\UrlManager',
             'rules' => [
 
                 '' => 'site/index',
