@@ -17,7 +17,7 @@ return [
 //                'username' => 'noreply@stockaccs.com', /*noreply@stockaccs.com*/
 //                'password' => 'h45eRBGBKdfks', /*h45eRBGBKdfks*/
 //                'port' => '465',
-//                'encryption' => 'ssl',
+//                'encryption' => 'ssl', asd фыв asd asd asdasd asd asd
 //            ],
 
 //            'transport' => [
