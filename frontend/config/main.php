@@ -28,7 +28,7 @@ return [
             'enableCookieValidation' => true,
             'enableCsrfValidation' => true,
             'cookieValidationKey' => 'sUKHoU8WXE4mouNbUqUe0lH_Xe37UPmN',
-            'class' => 'frontend\components\LangRequest'
+//            'class' => 'frontend\components\LangRequest'
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -95,14 +95,14 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
+//            'enableStrictParsing' => false,
             'showScriptName' => false,
-            'enableStrictParsing' => false,
-//            'class' => 'frontend\components\LangUrlManager',
+            'class' => 'frontend\components\LangUrlManager',
 //            'class' => 'yii\web\UrlManager',
             'rules' => [
 
                 '' => 'site/index',
-
+                'contact' => 'site/contact',
                 [
                     'pattern' => 'index',
                     'route' => 'seller/index',
@@ -121,7 +121,7 @@ return [
                 ],
                 [
                     'pattern' => '/faq',
-                    'route' => 'site/faq',
+                    'route' => 'faq/index',
                     'suffix' => '',
                 ],
                 [

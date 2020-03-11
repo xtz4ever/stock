@@ -329,7 +329,11 @@ class SiteController extends AppController
     {
 
         /* H1, description */
-        
+
+        echo "<pre>";
+        var_dump('AAA');
+        echo "</pre>";
+        die();
         $page_info = SeoPage::getSeo(Yii::$app->controller->action->id);
 
         $all_questions = Faq::getAllQuestions();
